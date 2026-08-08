@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FMCGIOUS | Premier FMCG Distributor in Dubai</title>
+    <script>
+        // Served from a subdirectory (e.g. GitHub Pages project site): resolve
+        // relative assets and routes against that prefix.
+        window.BASE_PATH = location.hostname.endsWith('github.io') && location.pathname.split('/')[1]
+            ? '/' + location.pathname.split('/')[1]
+            : '';
+        if (window.BASE_PATH) document.write('<base href="' + window.BASE_PATH + '/">');
+    </script>
     <link rel="icon" type="image/png" sizes="32x32" href="images/FMCG.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/FMCG.png">
     <link rel="apple-touch-icon" sizes="180x180" href="images/FMCG.png">
@@ -875,7 +883,7 @@
 
             // Update URL
             if (updateUrl) {
-                const url = routes[pageId] || '/';
+                const url = (window.BASE_PATH || '') + (routes[pageId] || '/');
                 history.pushState({ page: pageId }, '', url);
             }
 
@@ -895,7 +903,9 @@
 
         // Handle direct URL access
         function handleRoute() {
-            const path = window.location.pathname;
+            let path = window.location.pathname;
+            const base = window.BASE_PATH || '';
+            if (base && path.startsWith(base)) path = path.slice(base.length) || '/';
             const pageId = reverseRoutes[path] || 'home';
             
             // Map 'products' to 'inventory' for internal use
@@ -907,7 +917,8 @@
             navigateTo('inventory');
             
             // Update URL with category
-            const url = cat === 'all' ? '/products' : `/products?cat=${cat}`;
+            const base = window.BASE_PATH || '';
+            const url = cat === 'all' ? `${base}/products` : `${base}/products?cat=${cat}`;
             history.replaceState({ page: 'inventory', cat: cat }, '', url);
             
             // Update filter buttons visually using inline styles
@@ -954,7 +965,8 @@
             event.target.style.borderColor = '#fcad03';
             
             // Update URL with category
-            const url = cat === 'all' ? '/products' : `/products?cat=${cat}`;
+            const base = window.BASE_PATH || '';
+            const url = cat === 'all' ? `${base}/products` : `${base}/products?cat=${cat}`;
             history.replaceState({ page: 'inventory', cat: cat }, '', url);
             
             renderCatalog(cat);
