@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | FMCGIOUS - Premier FMCG Distributor</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/FMCG.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/FMCG.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/FMCG.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body class="overflow-x-hidden" style="background-color: var(--bg-secondary); color: var(--text-primary);">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 theme-bg shadow-sm transition-colors duration-300" style="background-color: var(--bg-primary);">
+        <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="../index.html" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 bg-[#fcad03] rounded flex items-center justify-center text-black font-black text-xl italic transition-transform group-hover:scale-105">FM</div>
+                <span class="text-2xl font-bold tracking-tight uppercase" style="color: var(--text-primary);">FMCG<span class="text-[#fcad03]">IOUS</span></span>
+            </a>
+            
+            <div class="hidden md:flex space-x-8 font-bold text-xs uppercase tracking-wider" style="color: var(--text-secondary);">
+                <a href="../index.html" class="nav-link hover:text-[#fcad03] transition">Home</a>
+                <a href="brands.html" class="nav-link hover:text-[#fcad03] transition">Brands</a>
+                <a href="products.html" class="nav-link hover:text-[#fcad03] transition">Products</a>
+                <a href="about.html" class="nav-link hover:text-[#fcad03] transition">About Us</a>
+                <a href="contact.html" class="nav-link active hover:text-[#fcad03] transition">Contact Us</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+                    <i data-lucide="moon" class="icon-moon"></i>
+                    <i data-lucide="sun" class="icon-sun"></i>
+                </button>
+
+                <a href="products.html" class="bg-[#fcad03] text-black px-6 py-2.5 rounded font-bold text-xs uppercase hover:bg-[#e09c02] transition hidden md:block">
+                    View Catalog
+                </a>
+
+                <button class="md:hidden p-2" onclick="toggleMobileMenu()">
+                    <i data-lucide="menu" id="menu-icon" class="w-7 h-7" style="color: var(--text-primary);"></i>
+                </button>
+            </div>
+        </nav>
+        
+        <!-- Mobile Nav -->
+        <div id="mobile-menu" class="hidden md:hidden border-t p-6 space-y-4 shadow-xl absolute w-full left-0" style="background-color: var(--bg-primary); border-color: var(--border-color);">
+            <a href="../index.html" class="block font-bold" style="color: var(--text-primary);">HOME</a>
+            <a href="brands.html" class="block font-bold" style="color: var(--text-primary);">BRANDS</a>
+            <a href="products.html" class="block font-bold" style="color: var(--text-primary);">PRODUCTS</a>
+            <a href="about.html" class="block font-bold" style="color: var(--text-primary);">ABOUT US</a>
+            <a href="contact.html" class="block font-bold text-[#fcad03]">CONTACT US</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Hero -->
+        <section class="page-hero py-20">
+            <div class="relative z-10 max-w-4xl mx-auto text-center px-6">
+                <div class="breadcrumb justify-center mb-6">
+                    <a href="../index.html" class="text-gray-400 hover:text-[#fcad03]">Home</a>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-gray-500"></i>
+                    <span class="text-[#fcad03]">Contact Us</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-black text-white mb-4">Get In Touch</h1>
+                <p class="text-gray-300 text-lg max-w-2xl mx-auto">Have questions about our products or wholesale pricing? Our team is ready to assist you.</p>
+            </div>
+        </section>
+
+        <!-- Contact Content -->
+        <section class="py-24" style="background-color: var(--bg-primary);">
+            <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-20">
+                <!-- Contact Info -->
+                <div>
+                    <h2 class="text-4xl font-black mb-8" style="color: var(--text-primary);">Contact Us</h2>
+                    <p class="mb-12 text-lg" style="color: var(--text-secondary);">Inquire about wholesale pricing, shipping origins, and availability. Our export desk is ready to assist your business.</p>
+                    
+                    <div class="space-y-8">
+                        <!-- Location -->
+                        <div class="flex gap-6 items-start">
+                            <div class="w-14 h-14 bg-[#fcad03] rounded-xl flex items-center justify-center shrink-0 text-black shadow-lg">
+                                <i data-lucide="map-pin" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold mb-2 text-lg" style="color: var(--text-primary);">Our Location</h5>
+                                <p class="text-sm leading-relaxed" style="color: var(--text-secondary);">
+                                    TAREEQ AL MAJD TR., Office No. 10N,<br>
+                                    Khan Saheb Building, Al Majaz Area,<br>
+                                    Sharjah, UAE
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="flex gap-6 items-start">
+                            <div class="w-14 h-14 bg-[#fcad03] rounded-xl flex items-center justify-center shrink-0 text-black shadow-lg">
+                                <i data-lucide="mail" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold mb-2 text-lg" style="color: var(--text-primary);">Email Us</h5>
+                                <a href="mailto:SALES@TRADEIOUS.COM" class="text-sm hover:text-[#fcad03] transition" style="color: var(--text-secondary);">SALES@TRADEIOUS.COM</a>
+                            </div>
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="flex gap-6 items-start">
+                            <div class="w-14 h-14 bg-[#fcad03] rounded-xl flex items-center justify-center shrink-0 text-black shadow-lg">
+                                <i data-lucide="phone" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold mb-2 text-lg" style="color: var(--text-primary);">Call Us</h5>
+                                <a href="tel:+97157421472" class="text-sm hover:text-[#fcad03] transition" style="color: var(--text-secondary);">+971 5 742 1472</a>
+                            </div>
+                        </div>
+
+                        <!-- Business Hours -->
+                        <div class="flex gap-6 items-start">
+                            <div class="w-14 h-14 bg-[#fcad03] rounded-xl flex items-center justify-center shrink-0 text-black shadow-lg">
+                                <i data-lucide="clock" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold mb-2 text-lg" style="color: var(--text-primary);">Business Hours</h5>
+                                <p class="text-sm" style="color: var(--text-secondary);">
+                                    Sunday - Thursday: 9:00 AM - 6:00 PM<br>
+                                    Friday - Saturday: Closed
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="mt-12 pt-8 border-t" style="border-color: var(--border-color);">
+                        <h5 class="font-bold mb-4" style="color: var(--text-primary);">Follow Us</h5>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-12 h-12 rounded-full flex items-center justify-center hover:bg-[#fcad03] hover:text-black transition" style="background-color: var(--bg-tertiary); color: var(--text-primary);">
+                                <i data-lucide="instagram" class="w-5 h-5"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 rounded-full flex items-center justify-center hover:bg-[#fcad03] hover:text-black transition" style="background-color: var(--bg-tertiary); color: var(--text-primary);">
+                                <i data-lucide="linkedin" class="w-5 h-5"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 rounded-full flex items-center justify-center hover:bg-[#fcad03] hover:text-black transition" style="background-color: var(--bg-tertiary); color: var(--text-primary);">
+                                <i data-lucide="facebook" class="w-5 h-5"></i>
+                            </a>
+                            <a href="https://wa.me/97157421472" target="_blank" class="w-12 h-12 rounded-full flex items-center justify-center hover:bg-[#25D366] hover:text-white transition" style="background-color: var(--bg-tertiary); color: var(--text-primary);">
+                                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="p-10 rounded-2xl border shadow-xl" style="background-color: var(--bg-tertiary); border-color: var(--border-color);">
+                    <h3 class="text-2xl font-bold mb-2" style="color: var(--text-primary);">Send Us a Message</h3>
+                    <p class="mb-8 text-sm" style="color: var(--text-secondary);">Fill out the form below and we'll get back to you within 24 hours.</p>
+                    
+                    <form onsubmit="handleContactForm(event)" class="contact-form space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-widest mb-2" style="color: var(--text-tertiary);">Full Name *</label>
+                                <input type="text" name="name" placeholder="John Doe" required class="w-full">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-widest mb-2" style="color: var(--text-tertiary);">Company Name *</label>
+                                <input type="text" name="company" placeholder="Your Company" required class="w-full">
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-widest mb-2" style="color: var(--text-tertiary);">Business Email *</label>
+                                <input type="email" name="email" placeholder="john@company.com" required class="w-full">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-widest mb-2" style="color: var(--text-tertiary);">Phone Number</label>
+                                <input type="tel" name="phone" placeholder="+971 XX XXX XXXX" class="w-full">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-widest mb-2" style="color: var(--text-tertiary);">Subject *</label>
+                            <select name="subject" required class="w-full px-6 py-4 rounded focus:ring-2 focus:ring-[#fcad03] outline-none" style="background-color: var(--bg-secondary); color: var(--text-primary); border: none;">
+                                <option value="">Select a subject</option>
+                                <option value="wholesale">Wholesale Inquiry</option>
+                                <option value="pricing">Product Pricing</option>
+                                <option value="distribution">Distribution Partnership</option>
+                                <option value="shipping">Shipping & Logistics</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-widest mb-2" style="color: var(--text-tertiary);">Message *</label>
+                            <textarea name="message" rows="5" placeholder="How can we help you? Please include details about products, quantities, and delivery requirements..." required class="w-full"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-[#fcad03] hover:bg-[#e09c02] text-black py-5 rounded font-bold uppercase tracking-widest text-sm transition shadow-2xl flex items-center justify-center gap-2">
+                            <span>Submit Enquiry</span>
+                            <i data-lucide="send" class="w-4 h-4"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section class="py-16" style="background-color: var(--bg-secondary);">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-black mb-4" style="color: var(--text-primary);">Find Us</h2>
+                    <p style="color: var(--text-secondary);">Visit our office in Sharjah, UAE</p>
+                </div>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.875543644!2d55.38800781501!3d25.32419438381!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5b5a5a5a5a5a%3A0x0!2sAl%20Majaz%2C%20Sharjah!5e0!3m2!1sen!2sae!4v1234567890"
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 bg-black text-center">
+            <div class="max-w-4xl mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-black text-white mb-6">Ready to Partner With Us?</h2>
+                <p class="text-gray-400 mb-8 text-lg">Explore our extensive product catalog and discover wholesale opportunities.</p>
+                <a href="products.html" class="inline-block bg-[#fcad03] hover:bg-[#e09c02] text-black px-10 py-4 rounded font-bold text-sm uppercase transition shadow-lg">
+                    Browse Products
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-20 px-6 border-t" style="background-color: var(--bg-primary); border-color: var(--border-color);">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 text-sm" style="color: var(--text-secondary);">
+            <div>
+                <div class="flex items-center gap-2 mb-6">
+                    <div class="w-8 h-8 bg-[#fcad03] rounded flex items-center justify-center text-black font-black text-sm italic">FM</div>
+                    <span class="text-xl font-bold tracking-tight uppercase" style="color: var(--text-primary);">FMCGIOUS</span>
+                </div>
+                <p class="leading-relaxed">FMCGIOUS is a global leader in FMCG distribution, connecting high-quality brands with consumers worldwide.</p>
+            </div>
+            <div>
+                <h6 class="font-bold uppercase mb-6 tracking-widest" style="color: var(--text-primary);">Navigation</h6>
+                <ul class="space-y-3">
+                    <li><a href="../index.html" class="hover:text-[#fcad03]">Home</a></li>
+                    <li><a href="products.html" class="hover:text-[#fcad03]">All Products</a></li>
+                    <li><a href="about.html" class="hover:text-[#fcad03]">About Our Hub</a></li>
+                    <li><a href="contact.html" class="hover:text-[#fcad03]">Enquire Now</a></li>
+                </ul>
+            </div>
+            <div>
+                <h6 class="font-bold uppercase mb-6 tracking-widest" style="color: var(--text-primary);">Popular</h6>
+                <ul class="space-y-3">
+                    <li><a href="products.html?cat=beverages" class="hover:text-[#fcad03]">Beverages & Drinks</a></li>
+                    <li><a href="products.html?cat=household" class="hover:text-[#fcad03]">Laundry & Home Care</a></li>
+                    <li><a href="products.html?cat=personal-care" class="hover:text-[#fcad03]">Personal Hygiene</a></li>
+                    <li><a href="products.html?cat=food" class="hover:text-[#fcad03]">Confectionary</a></li>
+                </ul>
+            </div>
+            <div>
+                <h6 class="font-bold uppercase mb-6 tracking-widest" style="color: var(--text-primary);">Connect</h6>
+                <div class="flex space-x-4 mb-6">
+                    <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-[#fcad03] hover:text-black transition" style="background-color: var(--bg-tertiary);"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-[#fcad03] hover:text-black transition" style="background-color: var(--bg-tertiary);"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+                </div>
+                <p class="text-xs">© 2026 FMCGIOUS LLC.<br>All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+    <script>
+        window.onload = () => {
+            lucide.createIcons();
+        };
+    </script>
+</body>
+</html>

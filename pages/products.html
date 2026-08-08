@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products | FMCGIOUS - Premier FMCG Distributor</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/FMCG.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/FMCG.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/FMCG.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body class="overflow-x-hidden" style="background-color: var(--bg-secondary); color: var(--text-primary);">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 theme-bg shadow-sm transition-colors duration-300" style="background-color: var(--bg-primary);">
+        <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="../index.html" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 bg-[#fcad03] rounded flex items-center justify-center text-black font-black text-xl italic transition-transform group-hover:scale-105">FM</div>
+                <span class="text-2xl font-bold tracking-tight uppercase" style="color: var(--text-primary);">FMCG<span class="text-[#fcad03]">IOUS</span></span>
+            </a>
+            
+            <div class="hidden md:flex space-x-8 font-bold text-xs uppercase tracking-wider" style="color: var(--text-secondary);">
+                <a href="../index.html" class="nav-link hover:text-[#fcad03] transition">Home</a>
+                <a href="brands.html" class="nav-link hover:text-[#fcad03] transition">Brands</a>
+                <a href="products.html" class="nav-link active hover:text-[#fcad03] transition">Products</a>
+                <a href="about.html" class="nav-link hover:text-[#fcad03] transition">About Us</a>
+                <a href="contact.html" class="nav-link hover:text-[#fcad03] transition">Contact Us</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+                    <i data-lucide="moon" class="icon-moon"></i>
+                    <i data-lucide="sun" class="icon-sun"></i>
+                </button>
+
+                <a href="contact.html" class="bg-[#fcad03] text-black px-6 py-2.5 rounded font-bold text-xs uppercase hover:bg-[#e09c02] transition hidden md:block">
+                    Get Quote
+                </a>
+
+                <button class="md:hidden p-2" onclick="toggleMobileMenu()">
+                    <i data-lucide="menu" id="menu-icon" class="w-7 h-7" style="color: var(--text-primary);"></i>
+                </button>
+            </div>
+        </nav>
+        
+        <!-- Mobile Nav -->
+        <div id="mobile-menu" class="hidden md:hidden border-t p-6 space-y-4 shadow-xl absolute w-full left-0" style="background-color: var(--bg-primary); border-color: var(--border-color);">
+            <a href="../index.html" class="block font-bold" style="color: var(--text-primary);">HOME</a>
+            <a href="brands.html" class="block font-bold" style="color: var(--text-primary);">BRANDS</a>
+            <a href="products.html" class="block font-bold text-[#fcad03]">PRODUCTS</a>
+            <a href="about.html" class="block font-bold" style="color: var(--text-primary);">ABOUT US</a>
+            <a href="contact.html" class="block font-bold" style="color: var(--text-primary);">CONTACT US</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Hero -->
+        <section class="page-hero py-20">
+            <div class="relative z-10 max-w-4xl mx-auto text-center px-6">
+                <div class="breadcrumb justify-center mb-6">
+                    <a href="../index.html" class="text-gray-400 hover:text-[#fcad03]">Home</a>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-gray-500"></i>
+                    <span class="text-[#fcad03]">Products</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-black text-white mb-4">Product Catalog</h1>
+                <p class="text-gray-300 text-lg max-w-2xl mx-auto">Browse our extensive collection of premium FMCG products available for wholesale distribution.</p>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="py-20" style="background-color: var(--bg-secondary);">
+            <div class="max-w-7xl mx-auto px-6">
+                <!-- Filter Buttons -->
+                <div class="mb-12">
+                    <div class="flex flex-wrap gap-3">
+                        <button onclick="filterProducts('all')" class="filter-btn active px-6 py-3 rounded-lg font-bold text-[10px] uppercase tracking-widest shadow transition" style="background-color: #fcad03; color: #000;">
+                            All Products
+                        </button>
+                        <button onclick="filterProducts('beverages')" class="filter-btn px-6 py-3 rounded-lg font-bold text-[10px] uppercase tracking-widest border transition" style="background-color: var(--bg-primary); color: var(--text-secondary); border-color: var(--border-color);">
+                            Beverages
+                        </button>
+                        <button onclick="filterProducts('coffee-tea')" class="filter-btn px-6 py-3 rounded-lg font-bold text-[10px] uppercase tracking-widest border transition" style="background-color: var(--bg-primary); color: var(--text-secondary); border-color: var(--border-color);">
+                            Coffee & Tea
+                        </button>
+                        <button onclick="filterProducts('food')" class="filter-btn px-6 py-3 rounded-lg font-bold text-[10px] uppercase tracking-widest border transition" style="background-color: var(--bg-primary); color: var(--text-secondary); border-color: var(--border-color);">
+                            Food & Confectionery
+                        </button>
+                        <button onclick="filterProducts('personal-care')" class="filter-btn px-6 py-3 rounded-lg font-bold text-[10px] uppercase tracking-widest border transition" style="background-color: var(--bg-primary); color: var(--text-secondary); border-color: var(--border-color);">
+                            Personal Care
+                        </button>
+                        <button onclick="filterProducts('household')" class="filter-btn px-6 py-3 rounded-lg font-bold text-[10px] uppercase tracking-widest border transition" style="background-color: var(--bg-primary); color: var(--text-secondary); border-color: var(--border-color);">
+                            Household
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product Count -->
+                <div class="mb-8 flex items-center justify-between">
+                    <p id="product-count" style="color: var(--text-secondary);">Showing all products</p>
+                    <div class="flex items-center gap-2">
+                        <span class="text-sm" style="color: var(--text-tertiary);">Sort by:</span>
+                        <select class="px-4 py-2 rounded text-sm" style="background-color: var(--bg-primary); color: var(--text-primary); border: 1px solid var(--border-color);">
+                            <option>Name A-Z</option>
+                            <option>Name Z-A</option>
+                            <option>Brand</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Product Grid -->
+                <div id="catalog-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <!-- Products loaded via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 bg-black text-center">
+            <div class="max-w-4xl mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-black text-white mb-6">Need a Custom Quote?</h2>
+                <p class="text-gray-400 mb-8 text-lg">Contact our sales team for competitive wholesale pricing and bulk order discounts.</p>
+                <a href="contact.html" class="inline-block bg-[#fcad03] hover:bg-[#e09c02] text-black px-10 py-4 rounded font-bold text-sm uppercase transition shadow-lg">
+                    Request Quote
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-20 px-6 border-t" style="background-color: var(--bg-primary); border-color: var(--border-color);">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 text-sm" style="color: var(--text-secondary);">
+            <div>
+                <div class="flex items-center gap-2 mb-6">
+                    <div class="w-8 h-8 bg-[#fcad03] rounded flex items-center justify-center text-black font-black text-sm italic">FM</div>
+                    <span class="text-xl font-bold tracking-tight uppercase" style="color: var(--text-primary);">FMCGIOUS</span>
+                </div>
+                <p class="leading-relaxed">FMCGIOUS is a global leader in FMCG distribution, connecting high-quality brands with consumers worldwide.</p>
+            </div>
+            <div>
+                <h6 class="font-bold uppercase mb-6 tracking-widest" style="color: var(--text-primary);">Navigation</h6>
+                <ul class="space-y-3">
+                    <li><a href="../index.html" class="hover:text-[#fcad03]">Home</a></li>
+                    <li><a href="products.html" class="hover:text-[#fcad03]">All Products</a></li>
+                    <li><a href="about.html" class="hover:text-[#fcad03]">About Our Hub</a></li>
+                    <li><a href="contact.html" class="hover:text-[#fcad03]">Enquire Now</a></li>
+                </ul>
+            </div>
+            <div>
+                <h6 class="font-bold uppercase mb-6 tracking-widest" style="color: var(--text-primary);">Popular</h6>
+                <ul class="space-y-3">
+                    <li><a href="products.html?cat=beverages" class="hover:text-[#fcad03]">Beverages & Drinks</a></li>
+                    <li><a href="products.html?cat=household" class="hover:text-[#fcad03]">Laundry & Home Care</a></li>
+                    <li><a href="products.html?cat=personal-care" class="hover:text-[#fcad03]">Personal Hygiene</a></li>
+                    <li><a href="products.html?cat=food" class="hover:text-[#fcad03]">Confectionary</a></li>
+                </ul>
+            </div>
+            <div>
+                <h6 class="font-bold uppercase mb-6 tracking-widest" style="color: var(--text-primary);">Connect</h6>
+                <div class="flex space-x-4 mb-6">
+                    <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-[#fcad03] hover:text-black transition" style="background-color: var(--bg-tertiary);"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-[#fcad03] hover:text-black transition" style="background-color: var(--bg-tertiary);"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+                </div>
+                <p class="text-xs">© 2026 FMCGIOUS LLC.<br>All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/products.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script>
+        // Update product count display
+        function updateProductCount(count, category) {
+            const countEl = document.getElementById('product-count');
+            if (countEl) {
+                if (category === 'all') {
+                    countEl.textContent = `Showing all ${count} products`;
+                } else {
+                    countEl.textContent = `Showing ${count} products in ${category.replace('-', ' ')}`;
+                }
+            }
+        }
+
+        // Override filter to update count
+        function filterProducts(cat) {
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+                btn.style.backgroundColor = 'var(--bg-primary)';
+                btn.style.color = 'var(--text-secondary)';
+            });
+            
+            if (event && event.target) {
+                event.target.classList.add('active');
+                event.target.style.backgroundColor = '#fcad03';
+                event.target.style.color = '#000';
+            }
+            
+            renderCatalog(cat, 'catalog-grid', 'contact.html');
+            
+            const data = cat === 'all' ? products : products.filter(p => p.cat === cat);
+            updateProductCount(data.length, cat);
+        }
+
+        // Check URL params for category
+        function getUrlCategory() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get('cat') || 'all';
+        }
+
+        window.onload = () => {
+            lucide.createIcons();
+            
+            const category = getUrlCategory();
+            renderCatalog(category, 'catalog-grid', 'contact.html');
+            
+            const data = category === 'all' ? products : products.filter(p => p.cat === category);
+            updateProductCount(data.length, category);
+            
+            // Highlight active filter
+            if (category !== 'all') {
+                document.querySelectorAll('.filter-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                    btn.style.backgroundColor = 'var(--bg-primary)';
+                    btn.style.color = 'var(--text-secondary)';
+                    
+                    if (btn.textContent.toLowerCase().includes(category.replace('-', ' ').toLowerCase()) ||
+                        (category === 'food' && btn.textContent.includes('Food'))) {
+                        btn.classList.add('active');
+                        btn.style.backgroundColor = '#fcad03';
+                        btn.style.color = '#000';
+                    }
+                });
+            }
+        };
+    </script>
+</body>
+</html>

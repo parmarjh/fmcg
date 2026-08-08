@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FMCGIOUS | Premier FMCG Distributor in Dubai</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/FMCG.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/FMCG.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/FMCG.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "Mxrs7yMRuE2__hqpO",
+        });
+    })();
+    </script>
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* Light/Dark Mode Variables */
+        :root {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8fafc;
+            --bg-tertiary: #f1f5f9;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --text-tertiary: #94a3b8;
+            --border-color: #e2e8f0;
+            --card-bg: #ffffff;
+            --card-border: #e2e8f0;
+            --shadow-color: rgba(0, 0, 0, 0.1);
+            --accent: #fcad03;
+            --accent-hover: #e09c02;
+        }
+
+        [data-theme="dark"] {
+            --bg-primary: #000000;
+            --bg-secondary: #1c1c1e;
+            --bg-tertiary: #2c2c2e;
+            --text-primary: #f5f5f7;
+            --text-secondary: #a1a1a6;
+            --text-tertiary: #6e6e73;
+            --border-color: #38383a;
+            --card-bg: #1c1c1e;
+            --card-border: #38383a;
+            --shadow-color: rgba(0, 0, 0, 0.3);
+            --accent: #fcad03;
+            --accent-hover: #e09c02;
+        }
+
+        body { 
+            font-family: 'Inter', sans-serif; 
+            scroll-behavior: smooth;
+            background-color: var(--bg-secondary);
+            color: var(--text-primary);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Headings automatically use theme colors */
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--text-primary);
+            transition: color 0.3s ease;
+        }
+
+        /* Override for headings that should stay white (on dark backgrounds) */
+        h1.text-white, h2.text-white, h3.text-white, h4.text-white, h5.text-white, h6.text-white {
+            color: #ffffff !important;
+        }
+
+        /* Form placeholder colors */
+        input::placeholder,
+        textarea::placeholder {
+            color: var(--text-tertiary);
+            opacity: 1;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/homepg.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .page-view { display: none; animation: fadeIn 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
+        .page-view.active { display: block; }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Infinite Slider - Refined */
+        .brand-slider {
+            width: 100%;
+            overflow: hidden;
+            background: var(--bg-primary);
+            padding: 30px 0;
+            position: relative;
+        }
+
+        .brand-track {
+            display: flex;
+            width: calc(250px * 16);
+            animation: scroll-brands 40s linear infinite;
+        }
+
+        .brand-item {
+            width: 250px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 30px;
+            flex-shrink: 0;
+        }
+
+        .brand-item img {
+            max-height: 55px;
+            max-width: 100%;
+            filter: grayscale(100%);
+            opacity: 0.4;
+            transition: all 0.4s ease;
+        }
+
+        .brand-item:hover img {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+
+        /* Larger Brand Slider Variant */
+        .brand-slider-large {
+            width: 100%;
+            overflow: hidden;
+            background: var(--bg-primary);
+            padding: 50px 0;
+            position: relative;
+        }
+
+        .brand-slider-large .brand-track {
+            display: flex;
+            width: calc(320px * 16);
+            animation: scroll-brands-large 45s linear infinite;
+        }
+
+        .brand-slider-large .brand-item {
+            width: 320px;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 40px;
+            flex-shrink: 0;
+        }
+
+        .brand-slider-large .brand-item img {
+            max-height: 85px;
+            max-width: 100%;
+            filter: grayscale(100%);
+            opacity: 0.4;
+            transition: all 0.4s ease;
+        }
+
+        .brand-slider-large .brand-item:hover img {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+
+        @keyframes scroll-brands {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-250px * 8)); }
+        }
+
+        @keyframes scroll-brands-large {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-320px * 8)); }
+        }
+
+        .nav-link.active {
+            color: #fcad03;
+            font-weight: 700;
+        }
+
+        .product-card-hover:hover .details-btn {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Filter Button Styles */
+        .filter-btn {
+            transition: all 0.3s ease;
+        }
+        .filter-btn:hover:not(.active) {
+            background-color: var(--bg-tertiary) !important;
+            border-color: #fcad03 !important;
+            color: #fcad03 !important;
+            transform: translateY(-2px);
+        }
+        .filter-btn.active {
+            box-shadow: 0 4px 14px rgba(252, 173, 3, 0.4);
+        }
+
+        /* Custom Theme Colors */
+        .bg-primary { background-color: #fcad03; }
+        .text-primary { color: #fcad03; }
+        .hover\:bg-primary:hover { background-color: #fcad03; }
+        .hover\:text-primary:hover { color: #fcad03; }
+        .ring-primary { --tw-ring-color: #fcad03; }
+        .focus\:ring-primary:focus { --tw-ring-color: #fcad03; }
+
+        /* Dark Mode Overrides */
+        .theme-bg { background-color: var(--bg-primary); }
+        .theme-bg-secondary { background-color: var(--bg-secondary); }
+        .theme-bg-tertiary { background-color: var(--bg-tertiary); }
+        .theme-text { color: var(--text-primary); }
+        .theme-text-secondary { color: var(--text-secondary); }
+        .theme-text-tertiary { color: var(--text-tertiary); }
+        .theme-border { border-color: var(--border-color); }
+        .theme-card { background-color: var(--card-bg); border-color: var(--card-border); }
+
+        /* Theme Toggle Button */
+        .theme-toggle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background-color: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+        }
+        .theme-toggle:hover {
+            background-color: var(--accent);
+        }
+        .theme-toggle:hover svg {
+            color: #000;
+        }
+        .theme-toggle svg {
+            width: 20px;
+            height: 20px;
+            color: var(--text-primary);
+            transition: color 0.3s ease;
+        }
+
+        /* Hide icons based on theme */
+        [data-theme="dark"] .icon-moon { display: none; }
+        [data-theme="dark"] .icon-sun { display: block; }
+        :root .icon-sun { display: none; }
+        :root .icon-moon { display: block; }
+        [data-theme="light"] .icon-sun { display: none; }
+        [data-theme="light"] .icon-moon { display: block; }
+    </style>
+</head>
+<body class="overflow-x-hidden" style="background-color: var(--bg-secondary); color: var(--text-primary);">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 theme-bg shadow-sm transition-colors duration-300" style="background-color: var(--bg-primary);">
+        <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="javascript:void(0)" onclick="navigateTo('home')" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 bg-[#fcad03] rounded flex items-center justify-center text-black font-black text-xl italic transition-transform group-hover:scale-105">FM</div>
+                <span class="text-2xl font-bold tracking-tight uppercase" style="color: var(--text-primary);">FMCG<span class="text-[#fcad03]">IOUS</span></span>
+            </a>
+            
+            <div class="hidden md:flex space-x-8 font-bold text-xs uppercase tracking-wider" style="color: var(--text-secondary);">
+                <a href="javascript:void(0)" onclick="navigateTo('home')" class="nav-link active hover:text-[#fcad03] transition" data-page="home">Home</a>
+                <a href="javascript:void(0)" onclick="navigateTo('brands')" class="nav-link hover:text-[#fcad03] transition" data-page="brands">Brands</a>
+                <a href="javascript:void(0)" onclick="navigateTo('inventory')" class="nav-link hover:text-[#fcad03] transition" data-page="inventory">Products</a>
+                <a href="javascript:void(0)" onclick="navigateTo('about')" class="nav-link hover:text-[#fcad03] transition" data-page="about">About Us</a>
+                <a href="javascript:void(0)" onclick="navigateTo('contact')" class="nav-link hover:text-[#fcad03] transition" data-page="contact">Contact Us</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <!-- Theme Toggle -->
+                <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+                    <i data-lucide="moon" class="icon-moon"></i>
+                    <i data-lucide="sun" class="icon-sun"></i>
+                </button>
+
+                <button onclick="navigateTo('inventory')" class="bg-[#fcad03] text-black px-6 py-2.5 rounded font-bold text-xs uppercase hover:bg-[#e09c02] transition hidden md:block">
+                    View Catalog
+                </button>
+
+                <button class="md:hidden p-2" onclick="toggleMobileMenu()">
+                    <i data-lucide="menu" id="menu-icon" class="w-7 h-7" style="color: var(--text-primary);"></i>
+                </button>
+            </div>
+        </nav>
+        
+        <!-- Mobile Nav -->
+        <div id="mobile-menu" class="hidden md:hidden border-t p-6 space-y-4 shadow-xl absolute w-full left-0 animate-in slide-in-from-top duration-300" style="background-color: var(--bg-primary); border-color: var(--border-color);">
+            <a href="javascript:void(0)" onclick="navigateTo('home')" class="block font-bold" style="color: var(--text-primary);">HOME</a>
+            <a href="javascript:void(0)" onclick="navigateTo('brands')" class="block font-bold" style="color: var(--text-primary);">BRANDS</a>
+            <a href="javascript:void(0)" onclick="navigateTo('inventory')" class="block font-bold" style="color: var(--text-primary);">PRODUCTS</a>
+            <a href="javascript:void(0)" onclick="navigateTo('about')" class="block font-bold" style="color: var(--text-primary);">ABOUT US</a>
+            <a href="javascript:void(0)" onclick="navigateTo('contact')" class="block font-bold" style="color: var(--text-primary);">CONTACT US</a>
+        </div>
+    </header>
+
+    <main id="view-container">
+        <!-- HOME PAGE -->
+        <section id="view-home" class="page-view active">
+            <!-- Hero -->
+            <div class="hero-gradient min-h-[70vh] flex items-center text-white px-6 relative">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h1 class="text-4xl md:text-6xl font-black mb-6 leading-tight text-white" style="color: #ffffff !important;">Premium FMCG Products for Global Markets</h1>
+                    <p class="text-lg md:text-xl mb-10 opacity-90 font-light">Discover our extensive collection of high-quality fast-moving consumer goods sourced from world-class manufacturers.</p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <button onclick="navigateTo('inventory')" class="bg-[#fcad03] hover:bg-[#e09c02] text-black px-8 py-4 rounded font-bold text-sm uppercase transition shadow-lg">Explore Products</button>
+                        <button onclick="navigateTo('contact')" class="bg-white hover:bg-gray-100 text-black px-8 py-4 rounded font-bold text-sm uppercase transition">Contact Us</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Bar (InfinityBasket Inspiration) -->
+            <div class="bg-black py-16">
+                <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div>
+                        <span class="block text-4xl font-black text-[#fcad03] mb-2">500+</span>
+                        <p class="text-gray-400 text-[10px] font-bold uppercase tracking-widest">Products Available</p>
+                    </div>
+                    <div>
+                        <span class="block text-4xl font-black text-[#fcad03] mb-2">30+</span>
+                        <p class="text-gray-400 text-[10px] font-bold uppercase tracking-widest">Countries Served</p>
+                    </div>
+                    <div>
+                        <span class="block text-4xl font-black text-[#fcad03] mb-2">45+</span>
+                        <p class="text-gray-400 text-[10px] font-bold uppercase tracking-widest">Brand Partners</p>
+                    </div>
+                    <div>
+                        <span class="block text-4xl font-black text-[#fcad03] mb-2">10+</span>
+                        <p class="text-gray-400 text-[10px] font-bold uppercase tracking-widest">Years Experience</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Partners Slider (Large) -->
+            <div class="brand-slider-large" style="border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+                <div class="brand-track">
+                    <div class="brand-item"><img src="images/brands/unilever.svg" alt="Unilever"></div>
+                    <div class="brand-item"><img src="images/brands/nestle.svg" alt="Nestle"></div>
+                    <div class="brand-item"><img src="images/brands/pepsilogo.png" alt="Pepsi"></div>
+                    <div class="brand-item"><img src="images/brands/kelloggs.svg" alt="Kelloggs"></div>
+                    <div class="brand-item"><img src="images/brands/pg.svg" alt="P&G"></div>
+                    <div class="brand-item"><img src="images/brands/redbull.svg" alt="Red Bull"></div>
+                    <div class="brand-item"><img src="images/brands/nivea.svg" alt="Nivea"></div>
+                    <div class="brand-item"><img src="images/brands/cocacola.svg" alt="Coca-Cola"></div>
+                    <!-- Duplicates for seamless loop -->
+                    <div class="brand-item"><img src="images/brands/unilever.svg" alt="Unilever"></div>
+                    <div class="brand-item"><img src="images/brands/nestle.svg" alt="Nestle"></div>
+                    <div class="brand-item"><img src="images/brands/pepsilogo.png" alt="Pepsi"></div>
+                    <div class="brand-item"><img src="images/brands/kelloggs.svg" alt="Kelloggs"></div>
+                    <div class="brand-item"><img src="images/brands/pg.svg" alt="P&G"></div>
+                    <div class="brand-item"><img src="images/brands/redbull.svg" alt="Red Bull"></div>
+                    <div class="brand-item"><img src="images/brands/nivea.svg" alt="Nivea"></div>
+                    <div class="brand-item"><img src="images/brands/cocacola.svg" alt="Coca-Cola"></div>
+                </div>
+            </div>
+
+            <!-- Intro Section -->
+            <div class="py-24 max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h4 class="text-[#fcad03] font-bold uppercase tracking-widest text-xs mb-4">Who are we & What we do?</h4>
+                    <h2 class="text-3xl md:text-4xl font-black mb-6 leading-tight" style="color: var(--text-primary);">Leading FMCG Distributor in Global Markets</h2>
+                    <p class="mb-6 leading-relaxed" style="color: var(--text-secondary);">At FMCGIOUS, we pride ourselves on being a premier distributor of Fast-Moving Consumer Goods (FMCG) across global markets. With years of industry expertise, we connect quality products with consumers worldwide.</p>
+                    <p class="mb-8 leading-relaxed" style="color: var(--text-secondary);">Our extensive network and strategic partnerships enable us to offer a diverse range of products while maintaining the highest standards of quality and service.</p>
+                    <button onclick="navigateTo('about')" class="text-[#fcad03] font-bold flex items-center gap-2 hover:gap-3 transition-all">About Us <i data-lucide="arrow-right" class="w-4 h-4"></i></button>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="rounded-xl overflow-hidden shadow-2xl">
+                        <img src="images/categories/distribution.jpg" alt="Distribution Center" class="w-full h-full object-cover">
+                    </div>
+                    <div class="rounded-xl overflow-hidden shadow-2xl">
+                        <img src="images/categories/fmcg.jpeg" alt="FMCG Products" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Featured Selection -->
+            <div class="py-24" style="background-color: var(--bg-secondary);">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="flex justify-between items-end mb-12">
+                        <div>
+                            <h2 class="text-3xl font-black mb-2" style="color: var(--text-primary);">Featured Products</h2>
+                            <p style="color: var(--text-secondary);">Fastest moving items in our wholesale inventory</p>
+                        </div>
+                        <button onclick="navigateTo('inventory')" class="text-[#fcad03] font-bold text-sm uppercase hover:underline">View All</button>
+                    </div>
+                    <div id="featured-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                        <!-- Dynamic Featured Products -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Why Us Section (InfinityBasket Columns) -->
+            <div class="py-24 max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-black mb-4" style="color: var(--text-primary);">Why Us?</h2>
+                    <div class="w-20 h-1 bg-[#fcad03] mx-auto"></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+                    <div class="p-8">
+                        <div class="w-16 h-16 bg-[#fcad03]/10 text-[#fcad03] rounded-full flex items-center justify-center mx-auto mb-6"><i data-lucide="truck"></i></div>
+                        <h4 class="font-bold mb-2" style="color: var(--text-primary);">Fast Delivery</h4>
+                        <p class="text-sm" style="color: var(--text-secondary);">Next-day delivery available on local bulk orders.</p>
+                    </div>
+                    <div class="p-8">
+                        <div class="w-16 h-16 bg-[#fcad03]/10 text-[#fcad03] rounded-full flex items-center justify-center mx-auto mb-6"><i data-lucide="check-circle"></i></div>
+                        <h4 class="font-bold mb-2" style="color: var(--text-primary);">Quality Assured</h4>
+                        <p class="text-sm" style="color: var(--text-secondary);">All products pass our strict origin quality checks.</p>
+                    </div>
+                    <div class="p-8">
+                        <div class="w-16 h-16 bg-[#fcad03]/10 text-[#fcad03] rounded-full flex items-center justify-center mx-auto mb-6"><i data-lucide="award"></i></div>
+                        <h4 class="font-bold mb-2" style="color: var(--text-primary);">Premium Brands</h4>
+                        <p class="text-sm" style="color: var(--text-secondary);">Shop from the world's top international brand partners.</p>
+                    </div>
+                    <div class="p-8">
+                        <div class="w-16 h-16 bg-[#fcad03]/10 text-[#fcad03] rounded-full flex items-center justify-center mx-auto mb-6"><i data-lucide="dollar-sign"></i></div>
+                        <h4 class="font-bold mb-2" style="color: var(--text-primary);">Best Prices</h4>
+                        <p class="text-sm" style="color: var(--text-secondary);">Highly competitive wholesale pricing on all stock.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Brand Slider -->
+            <div class="brand-slider" style="border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+                <div class="brand-track">
+                    <div class="brand-item"><img src="images/brands/unilever.svg" alt="Unilever"></div>
+                    <div class="brand-item"><img src="images/brands/nestle.svg" alt="Nestle"></div>
+                    <div class="brand-item"><img src="images/brands/pepsilogo.png" alt="Pepsi"></div>
+                    <div class="brand-item"><img src="images/brands/kelloggs.svg" alt="Kelloggs"></div>
+                    <div class="brand-item"><img src="images/brands/pg.svg" alt="P&G"></div>
+                    <div class="brand-item"><img src="images/brands/redbull.svg" alt="Red Bull"></div>
+                    <div class="brand-item"><img src="images/brands/nivea.svg" alt="Nivea"></div>
+                    <div class="brand-item"><img src="images/brands/cocacola.svg" alt="Coca-Cola"></div>
+                    <!-- Duplicates for seamless loop -->
+                    <div class="brand-item"><img src="images/brands/unilever.svg" alt="Unilever"></div>
+                    <div class="brand-item"><img src="images/brands/nestle.svg" alt="Nestle"></div>
+                    <div class="brand-item"><img src="images/brands/pepsilogo.png" alt="Pepsi"></div>
+                    <div class="brand-item"><img src="images/brands/kelloggs.svg" alt="Kelloggs"></div>
+                    <div class="brand-item"><img src="images/brands/pg.svg" alt="P&G"></div>
+                    <div class="brand-item"><img src="images/brands/redbull.svg" alt="Red Bull"></div>
+                    <div class="brand-item"><img src="images/brands/nivea.svg" alt="Nivea"></div>
+                    <div class="brand-item"><img src="images/brands/cocacola.svg" alt="Coca-Cola"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BRANDS PAGE -->
+        <section id="view-brands" class="page-view py-20" style="background-color: var(--bg-primary);">
+            <div class="max-w-7xl mx-auto px-6">
+                <!-- Header -->
+                <div class="text-center mb-16">
+                    <h4 class="text-[#fcad03] font-bold uppercase tracking-widest text-xs mb-4">Our Categories</h4>
+                    <h2 class="text-4xl md:text-5xl font-black mb-6" style="color: var(--text-primary);">Explore Our Brands</h2>
+                    <p class="max-w-2xl mx-auto" style="color: var(--text-secondary);">Discover our extensive portfolio of premium FMCG brands across multiple categories, sourced from world-class manufacturers.</p>
+                </div>
+
+                <!-- Brand Category Cards Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Beverages Card -->
+                    <div class="group relative overflow-hidden rounded-2xl shadow-xl cursor-pointer transform transition-all duration-500 hover:scale-105 hover:shadow-2xl" onclick="navigateToCategory('beverages')">
+                        <div class="aspect-[4/3] overflow-hidden">
+                            <img src="images/categories/beverages.jpg" alt="Beverages" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="w-10 h-10 bg-[#fcad03] rounded-lg flex items-center justify-center">
+                                    <i data-lucide="coffee" class="w-5 h-5 text-black"></i>
+                                </div>
+                                <h3 class="text-2xl font-black text-white">Beverages</h3>
+                            </div>
+                            <p class="text-gray-300 text-sm mb-4">Soft drinks, energy drinks, juices, and refreshments from top global brands.</p>
+                            <div class="flex items-center gap-2 text-[#fcad03] font-bold text-sm group-hover:gap-3 transition-all">
+                                <span>View Products</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Confectioneries Card -->
+                    <div class="group relative overflow-hidden rounded-2xl shadow-xl cursor-pointer transform transition-all duration-500 hover:scale-105 hover:shadow-2xl" onclick="navigateToCategory('food')">
+                        <div class="aspect-[4/3] overflow-hidden">
+                            <img src="images/categories/confectionery.jpg" alt="Confectioneries" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="w-10 h-10 bg-[#fcad03] rounded-lg flex items-center justify-center">
+                                    <i data-lucide="candy" class="w-5 h-5 text-black"></i>
+                                </div>
+                                <h3 class="text-2xl font-black text-white">Confectioneries</h3>
+                            </div>
+                            <p class="text-gray-300 text-sm mb-4">Chocolates, candies, biscuits, and sweet treats from beloved brands.</p>
+                            <div class="flex items-center gap-2 text-[#fcad03] font-bold text-sm group-hover:gap-3 transition-all">
+                                <span>View Products</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Groceries Card -->
+                    <div class="group relative overflow-hidden rounded-2xl shadow-xl cursor-pointer transform transition-all duration-500 hover:scale-105 hover:shadow-2xl" onclick="navigateToCategory('all')">
+                        <div class="aspect-[4/3] overflow-hidden">
+                            <img src="images/categories/groceries.jpg" alt="Groceries" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="w-10 h-10 bg-[#fcad03] rounded-lg flex items-center justify-center">
+                                    <i data-lucide="shopping-basket" class="w-5 h-5 text-black"></i>
+                                </div>
+                                <h3 class="text-2xl font-black text-white">Groceries</h3>
+                            </div>
+                            <p class="text-gray-300 text-sm mb-4">Essential grocery items, pantry staples, and daily necessities.</p>
+                            <div class="flex items-center gap-2 text-[#fcad03] font-bold text-sm group-hover:gap-3 transition-all">
+                                <span>View Products</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Health & Beauty Card -->
+                    <div class="group relative overflow-hidden rounded-2xl shadow-xl cursor-pointer transform transition-all duration-500 hover:scale-105 hover:shadow-2xl" onclick="navigateToCategory('personal-care')">
+                        <div class="aspect-[4/3] overflow-hidden">
+                            <img src="images/categories/beauty.jpg" alt="Health & Beauty" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="w-10 h-10 bg-[#fcad03] rounded-lg flex items-center justify-center">
+                                    <i data-lucide="sparkles" class="w-5 h-5 text-black"></i>
+                                </div>
+                                <h3 class="text-2xl font-black text-white">Health & Beauty</h3>
+                            </div>
+                            <p class="text-gray-300 text-sm mb-4">Personal care, skincare, haircare, and wellness products.</p>
+                            <div class="flex items-center gap-2 text-[#fcad03] font-bold text-sm group-hover:gap-3 transition-all">
+                                <span>View Products</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Household Card -->
+                    <div class="group relative overflow-hidden rounded-2xl shadow-xl cursor-pointer transform transition-all duration-500 hover:scale-105 hover:shadow-2xl" onclick="navigateToCategory('household')">
+                        <div class="aspect-[4/3] overflow-hidden">
+                            <img src="images/categories/household.jpg" alt="Household" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="w-10 h-10 bg-[#fcad03] rounded-lg flex items-center justify-center">
+                                    <i data-lucide="home" class="w-5 h-5 text-black"></i>
+                                </div>
+                                <h3 class="text-2xl font-black text-white">Household</h3>
+                            </div>
+                            <p class="text-gray-300 text-sm mb-4">Cleaning supplies, detergents, and home care essentials.</p>
+                            <div class="flex items-center gap-2 text-[#fcad03] font-bold text-sm group-hover:gap-3 transition-all">
+                                <span>View Products</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Coffee & Tea Card -->
+                    <div class="group relative overflow-hidden rounded-2xl shadow-xl cursor-pointer transform transition-all duration-500 hover:scale-105 hover:shadow-2xl" onclick="navigateToCategory('coffee-tea')">
+                        <div class="aspect-[4/3] overflow-hidden">
+                            <img src="images/categories/coffee.jpg" alt="Coffee & Tea" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="w-10 h-10 bg-[#fcad03] rounded-lg flex items-center justify-center">
+                                    <i data-lucide="cup-soda" class="w-5 h-5 text-black"></i>
+                                </div>
+                                <h3 class="text-2xl font-black text-white">Coffee & Tea</h3>
+                            </div>
+                            <p class="text-gray-300 text-sm mb-4">Premium coffee, tea, and hot beverage selections.</p>
+                            <div class="flex items-center gap-2 text-[#fcad03] font-bold text-sm group-hover:gap-3 transition-all">
+                                <span>View Products</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Bottom CTA -->
+                <div class="mt-16 text-center">
+                    <p class="mb-6" style="color: var(--text-secondary);">Looking for specific brands or products?</p>
+                    <button onclick="navigateTo('contact')" class="bg-[#fcad03] hover:bg-[#e09c02] text-black px-8 py-4 rounded font-bold text-sm uppercase transition shadow-lg">
+                        Contact Our Team
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- INVENTORY PAGE -->
+        <section id="view-inventory" class="page-view py-20" style="background-color: var(--bg-secondary);">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="mb-12">
+                    <h2 class="text-4xl font-black mb-6" style="color: var(--text-primary);">Product Catalog</h2>
+                    <div class="flex flex-wrap gap-2">
+                        <button onclick="filterProducts('all')" data-cat="all" class="filter-btn active px-5 py-2 rounded font-bold text-[10px] uppercase tracking-widest border transition-all duration-300" style="background-color: #fcad03; color: #000; border-color: #fcad03;">All Products</button>
+                        <button onclick="filterProducts('beverages')" data-cat="beverages" class="filter-btn px-5 py-2 rounded font-bold text-[10px] uppercase tracking-widest border transition-all duration-300" style="background-color: var(--bg-primary); color: var(--text-secondary); border-color: var(--border-color);">Beverages</button>
+                        <button onclick="filterProducts('coffee-tea')" data-cat="coffee-tea" class="filter-btn px-5 py-2 rounded font-bold text-[10px] uppercase tracking-widest border transition-all duration-300" style="background-color: var(--bg-primary); color: var(--text-secondary); border-color: var(--border-color);">Coffee & Tea</button>
+                        <button onclick="filterProducts('food')" data-cat="food" class="filter-btn px-5 py-2 rounded font-bold text-[10px] uppercase tracking-widest border transition-all duration-300" style="background-color: var(--bg-primary); color: var(--text-secondary); border-color: var(--border-color);">Food & Confectionery</button>
+                        <button onclick="filterProducts('personal-care')" data-cat="personal-care" class="filter-btn px-5 py-2 rounded font-bold text-[10px] uppercase tracking-widest border transition-all duration-300" style="background-color: var(--bg-primary); color: var(--text-secondary); border-color: var(--border-color);">Personal Care</button>
+                        <button onclick="filterProducts('household')" data-cat="household" class="filter-btn px-5 py-2 rounded font-bold text-[10px] uppercase tracking-widest border transition-all duration-300" style="background-color: var(--bg-primary); color: var(--text-secondary); border-color: var(--border-color);">Household</button>
+                    </div>
+                </div>
+                <div id="catalog-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <!-- Loaded via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT PAGE -->
+        <section id="view-about" class="page-view py-24" style="background-color: var(--bg-primary);">
+            <div class="max-w-4xl mx-auto px-6">
+                <h2 class="text-4xl font-black mb-8" style="color: var(--text-primary);">Global Exporter Hub</h2>
+                <p class="text-lg mb-8 leading-relaxed" style="color: var(--text-secondary);">FMCGIOUS operates at the center of the world's fastest-growing trade route in Al Ras, Deira, Dubai. We are amongst the best FMCG, import, and export groups that work globally.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                    <div class="p-8 bg-[#fcad03]/10 rounded-xl">
+                        <h4 class="font-bold mb-4" style="color: var(--text-primary);">Our Vision</h4>
+                        <p class="text-sm" style="color: var(--text-secondary);">To bridge the gap between world-class brand owners and emerging global markets through efficient logistics.</p>
+                    </div>
+                    <div class="p-8 bg-[#fcad03]/10 rounded-xl">
+                        <h4 class="font-bold mb-4" style="color: var(--text-primary);">Our Mission</h4>
+                        <p class="text-sm" style="color: var(--text-secondary);">To provide container-load FMCG supply with unmatched speed, transparency, and quality assurance.</p>
+                    </div>
+                </div>
+                <img src="images/about.png" class="rounded-xl shadow-2xl" alt="Logistics Hub">
+            </div>
+        </section>
+
+        <!-- CONTACT PAGE -->
+        <section id="view-contact" class="page-view py-12 md:py-24" style="background-color: var(--bg-primary);">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-20">
+                <div class="text-center lg:text-left">
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-black mb-4 md:mb-8" style="color: var(--text-primary);">Contact Us</h2>
+                    <p class="mb-8 md:mb-12 text-base md:text-lg" style="color: var(--text-secondary);">Inquire about wholesale pricing, shipping origins, and availability. Our export desk is ready to assist your business.</p>
+                    <div class="space-y-6 md:space-y-8 inline-block text-left">
+                        <div class="flex gap-4 md:gap-6 items-start">
+                            <div class="w-10 h-10 md:w-12 md:h-12 bg-[#fcad03] rounded flex items-center justify-center shrink-0 text-black"><i data-lucide="map-pin" class="w-5 h-5 md:w-6 md:h-6"></i></div>
+                            <div>
+                                <h5 class="font-bold mb-1" style="color: var(--text-primary);">Our Location</h5>
+                                <p class="text-sm" style="color: var(--text-secondary);">TAREEQ AL MAJD TR., Office No. 10N,<br>Khan Saheb Building, Al Majaz Area,<br>Sharjah, UAE</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 md:gap-6 items-start">
+                            <div class="w-10 h-10 md:w-12 md:h-12 bg-[#fcad03] rounded flex items-center justify-center shrink-0 text-black"><i data-lucide="mail" class="w-5 h-5 md:w-6 md:h-6"></i></div>
+                            <div>
+                                <h5 class="font-bold mb-1" style="color: var(--text-primary);">Email Us</h5>
+                                <p class="text-sm" style="color: var(--text-secondary);">SALES@TRADEIOUS.COM</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 md:gap-6 items-start">
+                            <div class="w-10 h-10 md:w-12 md:h-12 bg-[#fcad03] rounded flex items-center justify-center shrink-0 text-black"><i data-lucide="phone" class="w-5 h-5 md:w-6 md:h-6"></i></div>
+                            <div>
+                                <h5 class="font-bold mb-1" style="color: var(--text-primary);">Call Us</h5>
+                                <p class="text-sm" style="color: var(--text-secondary);">00971 5 742 1472</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6 sm:p-8 md:p-10 rounded-2xl border backdrop-blur-sm" style="background-color: var(--bg-tertiary); border-color: var(--border-color);">
+                    <form id="contact-form" onsubmit="sendEmail(event)" class="space-y-4 md:space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <input type="text" id="from_name" name="from_name" placeholder="Full Name" required class="border-none px-4 sm:px-6 py-3 sm:py-4 rounded focus:ring-2 focus:ring-[#fcad03] outline-none w-full text-sm sm:text-base" style="background-color: var(--bg-secondary); color: var(--text-primary);">
+                            <input type="text" id="company" name="company" placeholder="Company Name" required class="border-none px-4 sm:px-6 py-3 sm:py-4 rounded focus:ring-2 focus:ring-[#fcad03] outline-none w-full text-sm sm:text-base" style="background-color: var(--bg-secondary); color: var(--text-primary);">
+                        </div>
+                        <input type="email" id="reply_to" name="reply_to" placeholder="Business Email" required class="w-full border-none px-4 sm:px-6 py-3 sm:py-4 rounded focus:ring-2 focus:ring-[#fcad03] outline-none text-sm sm:text-base" style="background-color: var(--bg-secondary); color: var(--text-primary);">
+                        <textarea rows="4" id="message" name="message" placeholder="How can we help you?" required class="w-full border-none px-4 sm:px-6 py-3 sm:py-4 rounded focus:ring-2 focus:ring-[#fcad03] outline-none resize-none text-sm sm:text-base" style="background-color: var(--bg-secondary); color: var(--text-primary);"></textarea>
+                        <button type="submit" id="submit-btn" class="w-full bg-[#fcad03] hover:bg-[#e09c02] text-black py-4 sm:py-5 rounded font-bold uppercase tracking-widest text-xs sm:text-sm transition shadow-2xl">Submit Enquiry</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-20 px-6 border-t" style="background-color: var(--bg-primary); border-color: var(--border-color);">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 text-sm" style="color: var(--text-secondary);">
+            <div>
+                <div class="flex items-center gap-2 mb-6">
+                    <div class="w-8 h-8 bg-[#fcad03] rounded flex items-center justify-center text-black font-black text-sm italic">FM</div>
+                    <span class="text-xl font-bold tracking-tight uppercase" style="color: var(--text-primary);">FMCGIOUS</span>
+                </div>
+                <p class="leading-relaxed">FMCGIOUS is a global leader in FMCG distribution, connecting high-quality brands with consumers worldwide.</p>
+            </div>
+            <div>
+                <h6 class="font-bold uppercase mb-6 tracking-widest" style="color: var(--text-primary);">Navigation</h6>
+                <ul class="space-y-3">
+                    <li><a href="javascript:void(0)" onclick="navigateTo('home')" class="hover:text-[#fcad03]">Home</a></li>
+                    <li><a href="javascript:void(0)" onclick="navigateTo('inventory')" class="hover:text-[#fcad03]">All Products</a></li>
+                    <li><a href="javascript:void(0)" onclick="navigateTo('about')" class="hover:text-[#fcad03]">About Our Hub</a></li>
+                    <li><a href="javascript:void(0)" onclick="navigateTo('contact')" class="hover:text-[#fcad03]">Enquire Now</a></li>
+                </ul>
+            </div>
+            <div>
+                <h6 class="font-bold uppercase mb-6 tracking-widest" style="color: var(--text-primary);">Popular</h6>
+                <ul class="space-y-3">
+                    <li><a href="#" class="hover:text-[#fcad03]">Beverages & Drinks</a></li>
+                    <li><a href="#" class="hover:text-[#fcad03]">Laundry & Home Care</a></li>
+                    <li><a href="#" class="hover:text-[#fcad03]">Personal Hygiene</a></li>
+                    <li><a href="#" class="hover:text-[#fcad03]">Confectionary</a></li>
+                </ul>
+            </div>
+            <div>
+                <h6 class="font-bold uppercase mb-6 tracking-widest" style="color: var(--text-primary);">Connect</h6>
+                <div class="flex space-x-4 mb-6">
+                    <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-[#fcad03] hover:text-black transition" style="background-color: var(--bg-tertiary);"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-[#fcad03] hover:text-black transition" style="background-color: var(--bg-tertiary);"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+                </div>
+                <p class="text-xs">© 2026 FMCGIOUS<br>All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Theme Management
+        function getPreferredTheme() {
+            const stored = localStorage.getItem('theme');
+            if (stored) return stored;
+            return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+
+        function setTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            lucide.createIcons();
+        }
+
+        function toggleTheme() {
+            const current = document.documentElement.getAttribute('data-theme') || getPreferredTheme();
+            const next = current === 'dark' ? 'light' : 'dark';
+            setTheme(next);
+        }
+
+        // Initialize theme on page load
+        (function() {
+            setTheme(getPreferredTheme());
+            // Listen for system theme changes
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+                if (!localStorage.getItem('theme')) {
+                    setTheme(e.matches ? 'dark' : 'light');
+                }
+            });
+        })();
+
+        // Product Data
+        const products = [
+            // ==================== BEVERAGES ====================
+            // Carbonated Soft Drinks (PepsiCo)
+            { id: 1, name: "Pepsi Regular", brand: "PepsiCo", cat: "beverages", subcat: "carbonated", origin: "UAE", pack: "Cans, Glass & PET Bottles", volume: "Full Container", img: "images/products/pepsi-regular.avif" },
+            { id: 2, name: "Pepsi Diet & Max", brand: "PepsiCo", cat: "beverages", subcat: "carbonated", origin: "UAE", pack: "Cans & PET Bottles", volume: "Full Container", img: "images/products/pepsi-diet.jpg" },
+            { id: 3, name: "7UP Regular & Free", brand: "PepsiCo", cat: "beverages", subcat: "carbonated", origin: "UAE", pack: "Cans & PET Bottles", volume: "Full Container", img: "images/products/7up.jpg" },
+            { id: 4, name: "7UP Green Apple", brand: "PepsiCo", cat: "beverages", subcat: "carbonated", origin: "UAE", pack: "Cans & PET Bottles", volume: "Wholesale Only", img: "images/products/7up-apple.jpg" },
+            { id: 5, name: "Mirinda Orange", brand: "PepsiCo", cat: "beverages", subcat: "carbonated", origin: "UAE", pack: "Cans & PET Bottles", volume: "Full Container", img: "images/products/mirinda-orange.jpg" },
+            { id: 6, name: "Mirinda Citrus & Strawberry", brand: "PepsiCo", cat: "beverages", subcat: "carbonated", origin: "UAE", pack: "Cans & PET Bottles", volume: "Full Container", img: "images/products/mirinda-citrus.jpg" },
+            { id: 7, name: "Mountain Dew", brand: "PepsiCo", cat: "beverages", subcat: "carbonated", origin: "UAE", pack: "Cans & PET Bottles", volume: "Full Container", img: "images/products/mountain-dew.png" },
+            { id: 8, name: "Shani Malt Beverage", brand: "PepsiCo", cat: "beverages", subcat: "carbonated", origin: "UAE", pack: "Cans", volume: "Wholesale Only", img: "images/products/shani.jpg" },
+            
+            // Carbonated Soft Drinks (Coca-Cola)
+            { id: 9, name: "Coca-Cola Original", brand: "Coca-Cola", cat: "beverages", subcat: "carbonated", origin: "UAE", pack: "185ml - 2L Bottles", volume: "Full Container", img: "images/products/coca-cola.jpg" },
+            { id: 10, name: "Coca-Cola Zero Sugar", brand: "Coca-Cola", cat: "beverages", subcat: "carbonated", origin: "UAE", pack: "Cans & PET Bottles", volume: "Full Container", img: "images/products/coca-cola-zero.jpg" },
+            { id: 11, name: "Fanta Orange", brand: "Coca-Cola", cat: "beverages", subcat: "carbonated", origin: "UAE", pack: "Cans & PET Bottles", volume: "Full Container", img: "images/products/fanta-orange.jpg" },
+            { id: 12, name: "Fanta Strawberry", brand: "Coca-Cola", cat: "beverages", subcat: "carbonated", origin: "UAE", pack: "Cans & PET Bottles", volume: "Wholesale Only", img: "images/products/fanta-strawberry.jpg" },
+            { id: 13, name: "Sprite Regular", brand: "Coca-Cola", cat: "beverages", subcat: "carbonated", origin: "UAE", pack: "Full Size Range", volume: "Full Container", img: "images/products/sprite.jpg" },
+            { id: 14, name: "Sprite Zero", brand: "Coca-Cola", cat: "beverages", subcat: "carbonated", origin: "UAE", pack: "Cans & PET Bottles", volume: "Full Container", img: "images/products/sprite-zero.jpg" },
+            
+            // Energy & Malt Drinks
+            { id: 15, name: "Red Bull Energy", brand: "Red Bull", cat: "beverages", subcat: "energy", origin: "AUSTRIA", pack: "250ml Cans", volume: "4112cs / 40ft", img: "images/products/redbull.jpg" },
+            { id: 16, name: "Monster Energy", brand: "Monster", cat: "beverages", subcat: "energy", origin: "USA", pack: "355ml Cans", volume: "Wholesale Only", img: "images/products/monster.jpg" },
+            { id: 17, name: "Barbican Apple", brand: "Barbican", cat: "beverages", subcat: "malt", origin: "UAE", pack: "Glass Bottles & Cans", volume: "Full Container", img: "images/products/barbican-apple.jpg" },
+            { id: 18, name: "Barbican Pomegranate", brand: "Barbican", cat: "beverages", subcat: "malt", origin: "UAE", pack: "Glass Bottles & Cans", volume: "Full Container", img: "images/products/barbican-pomegranate.png" },
+            
+            // Fruit Drinks & Cordials
+            { id: 19, name: "Vimto Fruit Cordial", brand: "Vimto", cat: "beverages", subcat: "fruit", origin: "UK", pack: "Glass Bottles & Multipacks", volume: "Full Container", img: "images/products/vimto-cordial.jpg" },
+            { id: 20, name: "Vimto Fizzy", brand: "Vimto", cat: "beverages", subcat: "fruit", origin: "UK", pack: "Cans", volume: "Wholesale Only", img: "images/products/vimto-fizzy.png" },
+            
+            // Water
+            { id: 21, name: "Arwa Water", brand: "Arwa", cat: "beverages", subcat: "water", origin: "UAE", pack: "330ml, 500ml, 1.5L", volume: "Full Container", img: "images/products/arwa.jpg" },
+            
+            // ==================== COFFEE & TEA ====================
+            // Coffee
+            { id: 22, name: "Nescafé Dolce Gusto Espresso", brand: "Nescafé", cat: "coffee-tea", subcat: "coffee", origin: "EU", pack: "Pods - Intensity 5", volume: "Retail Ready", img: "images/products/nescafe-espresso.jpg" },
+            { id: 23, name: "Nescafé Dolce Gusto Lungo", brand: "Nescafé", cat: "coffee-tea", subcat: "coffee", origin: "EU", pack: "Pods - Intensity 6", volume: "Retail Ready", img: "images/products/nescafe-lungo.png" },
+            { id: 24, name: "Nescafé Dolce Gusto Cappuccino", brand: "Nescafé", cat: "coffee-tea", subcat: "coffee", origin: "EU", pack: "Pods", volume: "Retail Ready", img: "images/products/nescafe-cappuccino.jpg" },
+            { id: 25, name: "Nescafé Dolce Gusto Café au Lait", brand: "Nescafé", cat: "coffee-tea", subcat: "coffee", origin: "EU", pack: "Pods", volume: "Retail Ready", img: "images/products/nescafe-cafe-au-lait.png" },
+            { id: 26, name: "Nesquik Cocoa Pods", brand: "Nescafé", cat: "coffee-tea", subcat: "coffee", origin: "EU", pack: "Dolce Gusto Pods", volume: "Retail Ready", img: "images/products/nesquik-pods.avif" },
+            { id: 27, name: "Nescafé Gold Instant", brand: "Nescafé", cat: "coffee-tea", subcat: "coffee", origin: "EU", pack: "Jars - Intensity 7", volume: "1800cs / 40ft", img: "images/products/nescafe-gold.webp" },
+            { id: 28, name: "Nescafé 3in1 Classic", brand: "Nescafé", cat: "coffee-tea", subcat: "coffee", origin: "EU", pack: "20g Sachets x 24", volume: "Retail Display Boxes", img: "images/products/nescafe-3in1.png" },
+            
+            // Tea
+            { id: 29, name: "Lipton Yellow Label Black Tea", brand: "Lipton", cat: "coffee-tea", subcat: "tea", origin: "THAILAND", pack: "100 Teabags", volume: "36x100 Crates", img: "images/products/lipton-black.jpg" },
+            { id: 30, name: "Lipton Pure Green Tea", brand: "Lipton", cat: "coffee-tea", subcat: "tea", origin: "THAILAND", pack: "25 Teabags", volume: "24x25 Crates", img: "images/products/lipton-green.jpg" },
+            
+            // ==================== FOOD & CONFECTIONERY ====================
+            // Chocolate Miniatures
+            { id: 31, name: "Mars Miniatures", brand: "Mars", cat: "food", subcat: "chocolate", origin: "EU", pack: "150g Pillow Bags", volume: "Expiry Nov 2026", img: "images/products/mars.jpg" },
+            { id: 32, name: "Snickers Miniatures", brand: "Mars", cat: "food", subcat: "chocolate", origin: "EU", pack: "150g Pillow Bags", volume: "Expiry Dec 2026", img: "images/products/snickers.png" },
+            { id: 33, name: "Bounty Miniatures", brand: "Mars", cat: "food", subcat: "chocolate", origin: "EU", pack: "150g Pillow Bags", volume: "Expiry Nov 2026", img: "images/products/bounty.jpg" },
+            
+            // Chewing Gum
+            { id: 34, name: "Orbit Watermelon", brand: "Orbit", cat: "food", subcat: "gum", origin: "EU", pack: "Retail Packs", volume: "Full Container", img: "images/products/orbit-watermelon.png" },
+            { id: 35, name: "Orbit Strawberry-Banana", brand: "Orbit", cat: "food", subcat: "gum", origin: "EU", pack: "Retail Packs", volume: "Full Container", img: "images/products/orbit-strawberry.webp" },
+            { id: 36, name: "Orbit White Gentle Mint", brand: "Orbit", cat: "food", subcat: "gum", origin: "EU", pack: "Retail Packs", volume: "Full Container", img: "images/products/orbit-white.png" },
+            { id: 37, name: "Wrigley's Extra Peppermint", brand: "Wrigley's", cat: "food", subcat: "gum", origin: "EU", pack: "Sugar-Free", volume: "Full Container", img: "images/products/extra-peppermint.png" },
+            { id: 38, name: "Wrigley's Extra Spearmint", brand: "Wrigley's", cat: "food", subcat: "gum", origin: "EU", pack: "Sugar-Free", volume: "Full Container", img: "images/products/extra-spearmint.png" },
+            { id: 39, name: "Wrigley's Extra Bubblemint", brand: "Wrigley's", cat: "food", subcat: "gum", origin: "EU", pack: "Sugar-Free", volume: "Wholesale Only", img: "images/products/extra-bubblemint.png" },
+            
+            // Biscuits & Cereal
+            { id: 40, name: "LU Choco Prince", brand: "LU", cat: "food", subcat: "biscuits", origin: "EU", pack: "28.5g x 40 Box", volume: "Retail Boxes", img: "images/products/lu-choco-prince.jpg" },
+            { id: 41, name: "Nesquik Cereal", brand: "Nestlé", cat: "food", subcat: "cereal", origin: "EU", pack: "450g Bags", volume: "Full Container", img: "images/products/nesquik-cereal.jpg" },
+            
+            // Cooking Essentials
+            { id: 42, name: "Maggi Chicken Stock", brand: "Maggi", cat: "food", subcat: "cooking", origin: "EU", pack: "Cubes x 24 Display", volume: "Retail Ready", img: "images/products/maggi-stock.jpg" },
+            
+            // ==================== PERSONAL CARE ====================
+            // Hair Care
+            { id: 43, name: "Dabur Amla Gold Hair Oil", brand: "Dabur", cat: "personal-care", subcat: "hair", origin: "INDIA", pack: "100ml Bottles", volume: "Full Container", img: "images/products/dabur-amla.jpg" },
+            { id: 44, name: "Vatika Moisture Shampoo", brand: "Vatika", cat: "personal-care", subcat: "hair", origin: "INDIA", pack: "360ml Bottles", volume: "Full Container", img: "images/products/vatika-shampoo.jpg" },
+            { id: 45, name: "Vatika Hair Cream", brand: "Vatika", cat: "personal-care", subcat: "hair", origin: "INDIA", pack: "125ml - Almond & Honey", volume: "Full Container", img: "images/products/vatika-cream.jpg" },
+            
+            // Skin Care & Hygiene
+            { id: 46, name: "Vaseline Coconut Restore Oil", brand: "Vaseline", cat: "personal-care", subcat: "skin", origin: "EU", pack: "200ml Bottles", volume: "Full Container", img: "images/products/vaseline-coconut.jpg" },
+            { id: 47, name: "Vaseline Cocoa Radiant Oil", brand: "Vaseline", cat: "personal-care", subcat: "skin", origin: "EU", pack: "200ml Bottles", volume: "Full Container", img: "images/products/vaseline-cocoa.jpg" },
+            { id: 48, name: "Dettol Original Handwash", brand: "Dettol", cat: "personal-care", subcat: "hygiene", origin: "UK", pack: "210ml - BOGO Promo", volume: "Promotional Netting", img: "images/products/dettol.jpg" },
+            
+            // ==================== HOUSEHOLD ====================
+            // Cleaning
+            { id: 49, name: "Fairy Power Wipes Lemon", brand: "Fairy", cat: "household", subcat: "cleaning", origin: "TURKEY", pack: "Surface Towels", volume: "Full Container", img: "images/products/fairy-lemon.jpg" },
+            { id: 50, name: "Fairy Power Wipes Lavender", brand: "Fairy", cat: "household", subcat: "cleaning", origin: "TURKEY", pack: "Surface Towels", volume: "Full Container", img: "images/products/fairy-lavender.jpg" },
+            { id: 51, name: "Fairy Power Wipes White Soap", brand: "Fairy", cat: "household", subcat: "cleaning", origin: "TURKEY", pack: "Surface Towels", volume: "Full Container", img: "images/products/fairy-soap.png" }
+        ];
+
+        // URL Route mapping
+        const routes = {
+            'home': '/',
+            'brands': '/brands',
+            'inventory': '/products',
+            'about': '/about',
+            'contact': '/contact'
+        };
+
+        const reverseRoutes = {
+            '/': 'home',
+            '/home': 'home',
+            '/brands': 'brands',
+            '/products': 'products',
+            '/catalog': 'inventory',
+            '/about': 'about',
+            '/contact': 'contact'
+        };
+
+        function navigateTo(pageId, updateUrl = true) {
+            document.querySelectorAll('.page-view').forEach(view => view.classList.remove('active'));
+            document.getElementById(`view-${pageId}`).classList.add('active');
+            
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if(link.dataset.page === pageId) link.classList.add('active');
+            });
+
+            // Update URL
+            if (updateUrl) {
+                const url = routes[pageId] || '/';
+                history.pushState({ page: pageId }, '', url);
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            const menu = document.getElementById('mobile-menu');
+            if(!menu.classList.contains('hidden')) toggleMobileMenu();
+        }
+
+        // Handle browser back/forward buttons
+        window.addEventListener('popstate', (event) => {
+            if (event.state && event.state.page) {
+                navigateTo(event.state.page, false);
+            } else {
+                handleRoute();
+            }
+        });
+
+        // Handle direct URL access
+        function handleRoute() {
+            const path = window.location.pathname;
+            const pageId = reverseRoutes[path] || 'home';
+            
+            // Map 'products' to 'inventory' for internal use
+            const internalPageId = pageId === 'products' ? 'inventory' : pageId;
+            navigateTo(internalPageId, false);
+        }
+
+        function navigateToCategory(cat) {
+            navigateTo('inventory');
+            
+            // Update URL with category
+            const url = cat === 'all' ? '/products' : `/products?cat=${cat}`;
+            history.replaceState({ page: 'inventory', cat: cat }, '', url);
+            
+            // Update filter buttons visually using inline styles
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                const btnCat = btn.getAttribute('data-cat');
+                btn.classList.remove('active');
+                // Reset to inactive state
+                btn.style.backgroundColor = 'var(--bg-primary)';
+                btn.style.color = 'var(--text-secondary)';
+                btn.style.borderColor = 'var(--border-color)';
+                
+                // Set active state if this is the matching button
+                if (btnCat === cat) {
+                    btn.classList.add('active');
+                    btn.style.backgroundColor = '#fcad03';
+                    btn.style.color = '#000';
+                    btn.style.borderColor = '#fcad03';
+                }
+            });
+            renderCatalog(cat);
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+            menu.classList.toggle('hidden');
+            const isHidden = menu.classList.contains('hidden');
+            icon.setAttribute('data-lucide', isHidden ? 'menu' : 'x');
+            lucide.createIcons();
+        }
+
+        function filterProducts(cat) {
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+                // Reset to inactive state with theme-aware colors
+                btn.style.backgroundColor = 'var(--bg-primary)';
+                btn.style.color = 'var(--text-secondary)';
+                btn.style.borderColor = 'var(--border-color)';
+            });
+            // Set active state on clicked button
+            event.target.classList.add('active');
+            event.target.style.backgroundColor = '#fcad03';
+            event.target.style.color = '#000';
+            event.target.style.borderColor = '#fcad03';
+            
+            // Update URL with category
+            const url = cat === 'all' ? '/products' : `/products?cat=${cat}`;
+            history.replaceState({ page: 'inventory', cat: cat }, '', url);
+            
+            renderCatalog(cat);
+        }
+
+        function renderCatalog(cat = 'all') {
+            const grid = document.getElementById('catalog-grid');
+            const data = cat === 'all' ? products : products.filter(p => p.cat === cat);
+            grid.innerHTML = data.map(p => generateProductCard(p)).join('');
+            lucide.createIcons();
+        }
+
+        function generateProductCard(p) {
+            return `
+                <div class="rounded-lg overflow-hidden border product-card-hover group flex flex-col h-full shadow-sm hover:shadow-xl transition-all" style="background-color: var(--card-bg); border-color: var(--card-border);">
+                    <div class="h-56 flex items-center justify-center p-8 relative overflow-hidden" style="background-color: var(--bg-tertiary);">
+                        <img src="${p.img}" alt="${p.name}" class="max-h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-[#fcad03]/90 flex items-center justify-center opacity-0 transition-opacity details-btn">
+                             <button onclick="navigateTo('contact')" class="text-black font-bold text-xs uppercase tracking-widest bg-black text-white px-6 py-2 rounded">Enquire</button>
+                        </div>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col">
+                        <div class="flex items-center justify-between mb-2">
+                             <span class="text-[#fcad03] font-bold text-[9px] uppercase tracking-widest">${p.brand}</span>
+                             <span class="text-[8px] font-bold uppercase tracking-widest" style="color: var(--text-tertiary);">${p.origin} ORIGIN</span>
+                        </div>
+                        <h4 class="text-sm font-bold leading-tight mb-4 flex-1" style="color: var(--text-primary);">${p.name}</h4>
+                        <div class="p-3 rounded space-y-2 mb-4" style="background-color: var(--bg-tertiary);">
+                             <div class="flex justify-between text-[10px]">
+                                 <span class="uppercase font-bold" style="color: var(--text-tertiary);">Packaging:</span>
+                                 <span class="font-bold" style="color: var(--text-primary);">${p.pack}</span>
+                             </div>
+                             <div class="flex justify-between text-[10px]">
+                                 <span class="uppercase font-bold" style="color: var(--text-tertiary);">Availability:</span>
+                                 <span class="font-bold" style="color: var(--text-primary);">${p.volume}</span>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // EmailJS Send Function
+        function sendEmail(event) {
+            event.preventDefault();
+            
+            const submitBtn = document.getElementById('submit-btn');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+            
+            const templateParams = {
+                from_name: document.getElementById('from_name').value,
+                company: document.getElementById('company').value,
+                reply_to: document.getElementById('reply_to').value,
+                message: document.getElementById('message').value
+            };
+            
+            emailjs.send('service_fjobxwf', 'template_i4p1mix', templateParams)
+                .then(function(response) {
+                    alert('Message sent successfully! We will get back to you soon.');
+                    document.getElementById('contact-form').reset();
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                }, function(error) {
+                    alert('Failed to send message. Please try again.');
+                    console.error('EmailJS Error:', error);
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                });
+        }
+
+        window.onload = () => {
+            lucide.createIcons();
+            
+            // Render Home Featured Products (mix of categories)
+            const homeFeatured = document.getElementById('featured-grid');
+            const featuredProducts = [products[14], products[8], products[27], products[30]]; // Red Bull, Coca-Cola, Coca-Cola Zero, Mars
+            homeFeatured.innerHTML = featuredProducts.map(p => generateProductCard(p)).join('');
+            
+            // Render Catalog
+            renderCatalog('all');
+            
+            // Handle initial route on page load
+            handleRoute();
+            
+            // Check for category in URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const cat = urlParams.get('cat');
+            if (cat) {
+                navigateToCategory(cat);
+            }
+        };
+    </script>
+</body>
+</html>

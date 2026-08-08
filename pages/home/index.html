@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FMCGIOUS | Premier FMCG Distributor in UAE</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/FMCG.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/FMCG.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/FMCG.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="overflow-x-hidden" style="background-color: var(--bg-secondary); color: var(--text-primary);">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 theme-bg shadow-sm transition-colors duration-300" style="background-color: var(--bg-primary);">
+        <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 bg-[#fcad03] rounded flex items-center justify-center text-black font-black text-xl italic transition-transform group-hover:scale-105">FM</div>
+                <span class="text-2xl font-bold tracking-tight uppercase" style="color: var(--text-primary);">FMCG<span class="text-[#fcad03]">IOUS</span></span>
+            </a>
+            
+            <div class="hidden md:flex space-x-8 font-bold text-xs uppercase tracking-wider" style="color: var(--text-secondary);">
+                <a href="index.html" class="nav-link active hover:text-[#fcad03] transition">Home</a>
+                <a href="pages/brands.html" class="nav-link hover:text-[#fcad03] transition">Brands</a>
+                <a href="pages/products.html" class="nav-link hover:text-[#fcad03] transition">Products</a>
+                <a href="pages/about.html" class="nav-link hover:text-[#fcad03] transition">About Us</a>
+                <a href="pages/contact.html" class="nav-link hover:text-[#fcad03] transition">Contact Us</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+                    <i data-lucide="moon" class="icon-moon"></i>
+                    <i data-lucide="sun" class="icon-sun"></i>
+                </button>
+
+                <a href="pages/products.html" class="bg-[#fcad03] text-black px-6 py-2.5 rounded font-bold text-xs uppercase hover:bg-[#e09c02] transition hidden md:block">
+                    View Catalog
+                </a>
+
+                <button class="md:hidden p-2" onclick="toggleMobileMenu()">
+                    <i data-lucide="menu" id="menu-icon" class="w-7 h-7" style="color: var(--text-primary);"></i>
+                </button>
+            </div>
+        </nav>
+        
+        <!-- Mobile Nav -->
+        <div id="mobile-menu" class="hidden md:hidden border-t p-6 space-y-4 shadow-xl absolute w-full left-0" style="background-color: var(--bg-primary); border-color: var(--border-color);">
+            <a href="index.html" class="block font-bold" style="color: var(--text-primary);">HOME</a>
+            <a href="pages/brands.html" class="block font-bold" style="color: var(--text-primary);">BRANDS</a>
+            <a href="pages/products.html" class="block font-bold" style="color: var(--text-primary);">PRODUCTS</a>
+            <a href="pages/about.html" class="block font-bold" style="color: var(--text-primary);">ABOUT US</a>
+            <a href="pages/contact.html" class="block font-bold" style="color: var(--text-primary);">CONTACT US</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="hero-gradient min-h-[70vh] flex items-center text-white px-6 relative">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-4xl md:text-6xl font-black mb-6 leading-tight text-white">Premium FMCG Products for Global Markets</h1>
+                <p class="text-lg md:text-xl mb-10 opacity-90 font-light">Discover our extensive collection of high-quality fast-moving consumer goods sourced from world-class manufacturers.</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="pages/products.html" class="bg-[#fcad03] hover:bg-[#e09c02] text-black px-8 py-4 rounded font-bold text-sm uppercase transition shadow-lg">Explore Products</a>
+                    <a href="pages/contact.html" class="bg-white hover:bg-gray-100 text-black px-8 py-4 rounded font-bold text-sm uppercase transition">Contact Us</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Bar -->
+        <section class="bg-black py-16">
+            <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <span class="block text-4xl font-black text-[#fcad03] mb-2">500+</span>
+                    <p class="text-gray-400 text-[10px] font-bold uppercase tracking-widest">Products Available</p>
+                </div>
+                <div>
+                    <span class="block text-4xl font-black text-[#fcad03] mb-2">30+</span>
+                    <p class="text-gray-400 text-[10px] font-bold uppercase tracking-widest">Countries Served</p>
+                </div>
+                <div>
+                    <span class="block text-4xl font-black text-[#fcad03] mb-2">45+</span>
+                    <p class="text-gray-400 text-[10px] font-bold uppercase tracking-widest">Brand Partners</p>
+                </div>
+                <div>
+                    <span class="block text-4xl font-black text-[#fcad03] mb-2">10+</span>
+                    <p class="text-gray-400 text-[10px] font-bold uppercase tracking-widest">Years Experience</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Partners Slider -->
+        <section class="brand-slider-large" style="border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+            <div class="brand-track">
+                <div class="brand-item"><img src="https://cdn.worldvectorlogo.com/logos/unilever-2.svg" alt="Unilever"></div>
+                <div class="brand-item"><img src="https://cdn.worldvectorlogo.com/logos/nestle-2.svg" alt="Nestle"></div>
+                <div class="brand-item"><img src="https://www.pepsi.com/sites/brand-pepsi-com/themes/custom/pepsizero_fe/logo.png" alt="Pepsi"></div>
+                <div class="brand-item"><img src="https://cdn.worldvectorlogo.com/logos/kellogg-s.svg" alt="Kelloggs"></div>
+                <div class="brand-item"><img src="https://cdn.worldvectorlogo.com/logos/procter-gamble-2.svg" alt="P&G"></div>
+                <div class="brand-item"><img src="https://www.redbull.com/v3/resources/images/client/header/redbullcom-logo_double-with-text.svg" alt="Red Bull"></div>
+                <div class="brand-item"><img src="https://cdn.worldvectorlogo.com/logos/nivea-2.svg" alt="Nivea"></div>
+                <div class="brand-item"><img src="https://cdn.worldvectorlogo.com/logos/coca-cola-4.svg" alt="Coca-Cola"></div>
+                <!-- Duplicates for seamless loop -->
+                <div class="brand-item"><img src="https://cdn.worldvectorlogo.com/logos/unilever-2.svg" alt="Unilever"></div>
+                <div class="brand-item"><img src="https://cdn.worldvectorlogo.com/logos/nestle-2.svg" alt="Nestle"></div>
+                <div class="brand-item"><img src="https://www.pepsi.com/sites/brand-pepsi-com/themes/custom/pepsizero_fe/logo.png" alt="Pepsi"></div>
+                <div class="brand-item"><img src="https://cdn.worldvectorlogo.com/logos/kellogg-s.svg" alt="Kelloggs"></div>
+                <div class="brand-item"><img src="https://cdn.worldvectorlogo.com/logos/procter-gamble-2.svg" alt="P&G"></div>
+                <div class="brand-item"><img src="https://www.redbull.com/v3/resources/images/client/header/redbullcom-logo_double-with-text.svg" alt="Red Bull"></div>
+                <div class="brand-item"><img src="https://cdn.worldvectorlogo.com/logos/nivea-2.svg" alt="Nivea"></div>
+                <div class="brand-item"><img src="https://cdn.worldvectorlogo.com/logos/coca-cola-4.svg" alt="Coca-Cola"></div>
+            </div>
+        </section>
+
+        <!-- Intro Section -->
+        <section class="py-24 max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h4 class="text-[#fcad03] font-bold uppercase tracking-widest text-xs mb-4">Who are we & What we do?</h4>
+                <h2 class="text-3xl md:text-4xl font-black mb-6 leading-tight" style="color: var(--text-primary);">Leading FMCG Distributor in Global Markets</h2>
+                <p class="mb-6 leading-relaxed" style="color: var(--text-secondary);">At FMCGIOUS, we pride ourselves on being a premier distributor of Fast-Moving Consumer Goods (FMCG) across global markets. With years of industry expertise, we connect quality products with consumers worldwide.</p>
+                <p class="mb-8 leading-relaxed" style="color: var(--text-secondary);">Our extensive network and strategic partnerships enable us to offer a diverse range of products while maintaining the highest standards of quality and service.</p>
+                <a href="pages/about.html" class="text-[#fcad03] font-bold flex items-center gap-2 hover:gap-3 transition-all">About Us <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="rounded-xl overflow-hidden shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1000" alt="Distribution Center" class="w-full h-full object-cover">
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-2xl">
+                    <img src="https://www.treasureislands.ae/images/fmcg.jpeg" alt="FMCG Products" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Selection -->
+        <section class="py-24" style="background-color: var(--bg-secondary);">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="flex justify-between items-end mb-12">
+                    <div>
+                        <h2 class="text-3xl font-black mb-2" style="color: var(--text-primary);">Featured Products</h2>
+                        <p style="color: var(--text-secondary);">Fastest moving items in our wholesale inventory</p>
+                    </div>
+                    <a href="pages/products.html" class="text-[#fcad03] font-bold text-sm uppercase hover:underline">View All</a>
+                </div>
+                <div id="featured-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                    <!-- Dynamic Featured Products -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Us Section -->
+        <section class="py-24 max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-black mb-4" style="color: var(--text-primary);">Why Us?</h2>
+                <div class="w-20 h-1 bg-[#fcad03] mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+                <div class="p-8">
+                    <div class="w-16 h-16 bg-[#fcad03]/10 text-[#fcad03] rounded-full flex items-center justify-center mx-auto mb-6"><i data-lucide="truck"></i></div>
+                    <h4 class="font-bold mb-2" style="color: var(--text-primary);">Fast Delivery</h4>
+                    <p class="text-sm" style="color: var(--text-secondary);">Next-day delivery available on local bulk orders.</p>
+                </div>
+                <div class="p-8">
+                    <div class="w-16 h-16 bg-[#fcad03]/10 text-[#fcad03] rounded-full flex items-center justify-center mx-auto mb-6"><i data-lucide="check-circle"></i></div>
+                    <h4 class="font-bold mb-2" style="color: var(--text-primary);">Quality Assured</h4>
+                    <p class="text-sm" style="color: var(--text-secondary);">All products pass our strict origin quality checks.</p>
+                </div>
+                <div class="p-8">
+                    <div class="w-16 h-16 bg-[#fcad03]/10 text-[#fcad03] rounded-full flex items-center justify-center mx-auto mb-6"><i data-lucide="award"></i></div>
+                    <h4 class="font-bold mb-2" style="color: var(--text-primary);">Premium Brands</h4>
+                    <p class="text-sm" style="color: var(--text-secondary);">Shop from the world's top international brand partners.</p>
+                </div>
+                <div class="p-8">
+                    <div class="w-16 h-16 bg-[#fcad03]/10 text-[#fcad03] rounded-full flex items-center justify-center mx-auto mb-6"><i data-lucide="dollar-sign"></i></div>
+                    <h4 class="font-bold mb-2" style="color: var(--text-primary);">Best Prices</h4>
+                    <p class="text-sm" style="color: var(--text-secondary);">Highly competitive wholesale pricing on all stock.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Brand Slider -->
+        <section class="brand-slider" style="border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+            <div class="brand-track">
+                <div class="brand-item"><img src="https://cdn.worldvectorlogo.com/logos/unilever-2.svg" alt="Unilever"></div>
+                <div class="brand-item"><img src="https://cdn.worldvectorlogo.com/logos/nestle-2.svg" alt="Nestle"></div>
+                <div class="brand-item"><img src="https://www.pepsi.com/sites/brand-pepsi-com/themes/custom/pepsizero_fe/logo.png" alt="Pepsi"></div>
+                <div class="brand-item"><img src="https://cdn.worldvectorlogo.com/logos/kellogg-s.svg" alt="Kelloggs"></div>
+                <div class="brand-item"><img src="https://cdn.worldvectorlogo.com/logos/procter-gamble-2.svg" alt="P&G"></div>
+                <div class="brand-item"><img src="https://www.redbull.com/v3/resources/images/client/header/redbullcom-logo_double-with-text.svg" alt="Red Bull"></div>
+                <div class="brand-item"><img src="https://cdn.worldvectorlogo.com/logos/nivea-2.svg" alt="Nivea"></div>
+                <div class="brand-item"><img src="https://cdn.worldvectorlogo.com/logos/coca-cola-4.svg" alt="Coca-Cola"></div>
+                <!-- Duplicates for seamless loop -->
+                <div class="brand-item"><img src="https://cdn.worldvectorlogo.com/logos/unilever-2.svg" alt="Unilever"></div>
+                <div class="brand-item"><img src="https://cdn.worldvectorlogo.com/logos/nestle-2.svg" alt="Nestle"></div>
+                <div class="brand-item"><img src="https://www.pepsi.com/sites/brand-pepsi-com/themes/custom/pepsizero_fe/logo.png" alt="Pepsi"></div>
+                <div class="brand-item"><img src="https://cdn.worldvectorlogo.com/logos/kellogg-s.svg" alt="Kelloggs"></div>
+                <div class="brand-item"><img src="https://cdn.worldvectorlogo.com/logos/procter-gamble-2.svg" alt="P&G"></div>
+                <div class="brand-item"><img src="https://www.redbull.com/v3/resources/images/client/header/redbullcom-logo_double-with-text.svg" alt="Red Bull"></div>
+                <div class="brand-item"><img src="https://cdn.worldvectorlogo.com/logos/nivea-2.svg" alt="Nivea"></div>
+                <div class="brand-item"><img src="https://cdn.worldvectorlogo.com/logos/coca-cola-4.svg" alt="Coca-Cola"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-20 px-6 border-t" style="background-color: var(--bg-primary); border-color: var(--border-color);">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 text-sm" style="color: var(--text-secondary);">
+            <div>
+                <div class="flex items-center gap-2 mb-6">
+                    <div class="w-8 h-8 bg-[#fcad03] rounded flex items-center justify-center text-black font-black text-sm italic">FM</div>
+                    <span class="text-xl font-bold tracking-tight uppercase" style="color: var(--text-primary);">FMCGIOUS</span>
+                </div>
+                <p class="leading-relaxed">FMCGIOUS is a global leader in FMCG distribution, connecting high-quality brands with consumers worldwide.</p>
+            </div>
+            <div>
+                <h6 class="font-bold uppercase mb-6 tracking-widest" style="color: var(--text-primary);">Navigation</h6>
+                <ul class="space-y-3">
+                    <li><a href="index.html" class="hover:text-[#fcad03]">Home</a></li>
+                    <li><a href="pages/products.html" class="hover:text-[#fcad03]">All Products</a></li>
+                    <li><a href="pages/about.html" class="hover:text-[#fcad03]">About Our Hub</a></li>
+                    <li><a href="pages/contact.html" class="hover:text-[#fcad03]">Enquire Now</a></li>
+                </ul>
+            </div>
+            <div>
+                <h6 class="font-bold uppercase mb-6 tracking-widest" style="color: var(--text-primary);">Popular</h6>
+                <ul class="space-y-3">
+                    <li><a href="pages/products.html?cat=beverages" class="hover:text-[#fcad03]">Beverages & Drinks</a></li>
+                    <li><a href="pages/products.html?cat=household" class="hover:text-[#fcad03]">Laundry & Home Care</a></li>
+                    <li><a href="pages/products.html?cat=personal-care" class="hover:text-[#fcad03]">Personal Hygiene</a></li>
+                    <li><a href="pages/products.html?cat=food" class="hover:text-[#fcad03]">Confectionary</a></li>
+                </ul>
+            </div>
+            <div>
+                <h6 class="font-bold uppercase mb-6 tracking-widest" style="color: var(--text-primary);">Connect</h6>
+                <div class="flex space-x-4 mb-6">
+                    <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-[#fcad03] hover:text-black transition" style="background-color: var(--bg-tertiary);"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-[#fcad03] hover:text-black transition" style="background-color: var(--bg-tertiary);"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+                </div>
+                <p class="text-xs">© 2026 FMCGIOUS LLC.<br>All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/products.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        window.onload = () => {
+            lucide.createIcons();
+            renderFeaturedProducts('featured-grid', 'pages/contact.html');
+        };
+    </script>
+</body>
+</html>

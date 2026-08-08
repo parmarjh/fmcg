@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Brands | FMCGIOUS - Premier FMCG Distributor</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/FMCG.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/FMCG.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/FMCG.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body class="overflow-x-hidden" style="background-color: var(--bg-secondary); color: var(--text-primary);">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 theme-bg shadow-sm transition-colors duration-300" style="background-color: var(--bg-primary);">
+        <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="../index.html" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 bg-[#fcad03] rounded flex items-center justify-center text-black font-black text-xl italic transition-transform group-hover:scale-105">FM</div>
+                <span class="text-2xl font-bold tracking-tight uppercase" style="color: var(--text-primary);">FMCG<span class="text-[#fcad03]">IOUS</span></span>
+            </a>
+            
+            <div class="hidden md:flex space-x-8 font-bold text-xs uppercase tracking-wider" style="color: var(--text-secondary);">
+                <a href="../index.html" class="nav-link hover:text-[#fcad03] transition">Home</a>
+                <a href="brands.html" class="nav-link active hover:text-[#fcad03] transition">Brands</a>
+                <a href="products.html" class="nav-link hover:text-[#fcad03] transition">Products</a>
+                <a href="about.html" class="nav-link hover:text-[#fcad03] transition">About Us</a>
+                <a href="contact.html" class="nav-link hover:text-[#fcad03] transition">Contact Us</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+                    <i data-lucide="moon" class="icon-moon"></i>
+                    <i data-lucide="sun" class="icon-sun"></i>
+                </button>
+
+                <a href="products.html" class="bg-[#fcad03] text-black px-6 py-2.5 rounded font-bold text-xs uppercase hover:bg-[#e09c02] transition hidden md:block">
+                    View Catalog
+                </a>
+
+                <button class="md:hidden p-2" onclick="toggleMobileMenu()">
+                    <i data-lucide="menu" id="menu-icon" class="w-7 h-7" style="color: var(--text-primary);"></i>
+                </button>
+            </div>
+        </nav>
+        
+        <!-- Mobile Nav -->
+        <div id="mobile-menu" class="hidden md:hidden border-t p-6 space-y-4 shadow-xl absolute w-full left-0" style="background-color: var(--bg-primary); border-color: var(--border-color);">
+            <a href="../index.html" class="block font-bold" style="color: var(--text-primary);">HOME</a>
+            <a href="brands.html" class="block font-bold text-[#fcad03]">BRANDS</a>
+            <a href="products.html" class="block font-bold" style="color: var(--text-primary);">PRODUCTS</a>
+            <a href="about.html" class="block font-bold" style="color: var(--text-primary);">ABOUT US</a>
+            <a href="contact.html" class="block font-bold" style="color: var(--text-primary);">CONTACT US</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Hero -->
+        <section class="page-hero py-20">
+            <div class="relative z-10 max-w-4xl mx-auto text-center px-6">
+                <div class="breadcrumb justify-center mb-6">
+                    <a href="../index.html" class="text-gray-400 hover:text-[#fcad03]">Home</a>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-gray-500"></i>
+                    <span class="text-[#fcad03]">Brands</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-black text-white mb-4">Explore Our Brands</h1>
+                <p class="text-gray-300 text-lg max-w-2xl mx-auto">Discover our extensive portfolio of premium FMCG brands across multiple categories.</p>
+            </div>
+        </section>
+
+        <!-- Brand Categories -->
+        <section class="py-20" style="background-color: var(--bg-primary);">
+            <div class="max-w-7xl mx-auto px-6">
+                <!-- Category Cards Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Beverages Card -->
+                    <a href="products.html?cat=beverages" class="group relative overflow-hidden rounded-2xl shadow-xl cursor-pointer transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+                        <div class="aspect-[4/3] overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1581098365948-6a5a912b7a49?auto=format&fit=crop&q=80&w=800" alt="Beverages" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="w-10 h-10 bg-[#fcad03] rounded-lg flex items-center justify-center">
+                                    <i data-lucide="coffee" class="w-5 h-5 text-black"></i>
+                                </div>
+                                <h3 class="text-2xl font-black text-white">Beverages</h3>
+                            </div>
+                            <p class="text-gray-300 text-sm mb-4">Soft drinks, energy drinks, juices, and refreshments from top global brands.</p>
+                            <div class="flex items-center gap-2 text-[#fcad03] font-bold text-sm group-hover:gap-3 transition-all">
+                                <span>View Products</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Confectioneries Card -->
+                    <a href="products.html?cat=food" class="group relative overflow-hidden rounded-2xl shadow-xl cursor-pointer transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+                        <div class="aspect-[4/3] overflow-hidden">
+                            <img src="https://www.chocoliz.com/cdn/shop/files/IMG_20220322_000317_959_1200x1200.jpg?v=1650035544" alt="Confectioneries" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="w-10 h-10 bg-[#fcad03] rounded-lg flex items-center justify-center">
+                                    <i data-lucide="candy" class="w-5 h-5 text-black"></i>
+                                </div>
+                                <h3 class="text-2xl font-black text-white">Confectioneries</h3>
+                            </div>
+                            <p class="text-gray-300 text-sm mb-4">Chocolates, candies, biscuits, and sweet treats from beloved brands.</p>
+                            <div class="flex items-center gap-2 text-[#fcad03] font-bold text-sm group-hover:gap-3 transition-all">
+                                <span>View Products</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Groceries Card -->
+                    <a href="products.html" class="group relative overflow-hidden rounded-2xl shadow-xl cursor-pointer transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+                        <div class="aspect-[4/3] overflow-hidden">
+                            <img src="https://www.mbaskool.com/2018_images/top_brands/fmcg_world/fmcg01.jpg" alt="Groceries" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="w-10 h-10 bg-[#fcad03] rounded-lg flex items-center justify-center">
+                                    <i data-lucide="shopping-basket" class="w-5 h-5 text-black"></i>
+                                </div>
+                                <h3 class="text-2xl font-black text-white">Groceries</h3>
+                            </div>
+                            <p class="text-gray-300 text-sm mb-4">Essential grocery items, pantry staples, and daily necessities.</p>
+                            <div class="flex items-center gap-2 text-[#fcad03] font-bold text-sm group-hover:gap-3 transition-all">
+                                <span>View Products</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Health & Beauty Card -->
+                    <a href="products.html?cat=personal-care" class="group relative overflow-hidden rounded-2xl shadow-xl cursor-pointer transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+                        <div class="aspect-[4/3] overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&q=80&w=800" alt="Health & Beauty" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="w-10 h-10 bg-[#fcad03] rounded-lg flex items-center justify-center">
+                                    <i data-lucide="sparkles" class="w-5 h-5 text-black"></i>
+                                </div>
+                                <h3 class="text-2xl font-black text-white">Health & Beauty</h3>
+                            </div>
+                            <p class="text-gray-300 text-sm mb-4">Personal care, skincare, haircare, and wellness products.</p>
+                            <div class="flex items-center gap-2 text-[#fcad03] font-bold text-sm group-hover:gap-3 transition-all">
+                                <span>View Products</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Household Card -->
+                    <a href="products.html?cat=household" class="group relative overflow-hidden rounded-2xl shadow-xl cursor-pointer transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+                        <div class="aspect-[4/3] overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1563453392212-326f5e854473?auto=format&fit=crop&q=80&w=800" alt="Household" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="w-10 h-10 bg-[#fcad03] rounded-lg flex items-center justify-center">
+                                    <i data-lucide="home" class="w-5 h-5 text-black"></i>
+                                </div>
+                                <h3 class="text-2xl font-black text-white">Household</h3>
+                            </div>
+                            <p class="text-gray-300 text-sm mb-4">Cleaning supplies, detergents, and home care essentials.</p>
+                            <div class="flex items-center gap-2 text-[#fcad03] font-bold text-sm group-hover:gap-3 transition-all">
+                                <span>View Products</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Coffee & Tea Card -->
+                    <a href="products.html?cat=coffee-tea" class="group relative overflow-hidden rounded-2xl shadow-xl cursor-pointer transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+                        <div class="aspect-[4/3] overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?auto=format&fit=crop&q=80&w=800" alt="Coffee & Tea" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="w-10 h-10 bg-[#fcad03] rounded-lg flex items-center justify-center">
+                                    <i data-lucide="cup-soda" class="w-5 h-5 text-black"></i>
+                                </div>
+                                <h3 class="text-2xl font-black text-white">Coffee & Tea</h3>
+                            </div>
+                            <p class="text-gray-300 text-sm mb-4">Premium coffee, tea, and hot beverage selections.</p>
+                            <div class="flex items-center gap-2 text-[#fcad03] font-bold text-sm group-hover:gap-3 transition-all">
+                                <span>View Products</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Brand Partners Slider -->
+        <section class="brand-slider-large" style="border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+            <div class="brand-track">
+                <div class="brand-item"><img src="https://cdn.worldvectorlogo.com/logos/unilever-2.svg" alt="Unilever"></div>
+                <div class="brand-item"><img src="https://cdn.worldvectorlogo.com/logos/nestle-2.svg" alt="Nestle"></div>
+                <div class="brand-item"><img src="https://www.pepsi.com/sites/brand-pepsi-com/themes/custom/pepsizero_fe/logo.png" alt="Pepsi"></div>
+                <div class="brand-item"><img src="https://cdn.worldvectorlogo.com/logos/kellogg-s.svg" alt="Kelloggs"></div>
+                <div class="brand-item"><img src="https://cdn.worldvectorlogo.com/logos/procter-gamble-2.svg" alt="P&G"></div>
+                <div class="brand-item"><img src="https://www.redbull.com/v3/resources/images/client/header/redbullcom-logo_double-with-text.svg" alt="Red Bull"></div>
+                <div class="brand-item"><img src="https://cdn.worldvectorlogo.com/logos/nivea-2.svg" alt="Nivea"></div>
+                <div class="brand-item"><img src="https://cdn.worldvectorlogo.com/logos/coca-cola-4.svg" alt="Coca-Cola"></div>
+                <!-- Duplicates -->
+                <div class="brand-item"><img src="https://cdn.worldvectorlogo.com/logos/unilever-2.svg" alt="Unilever"></div>
+                <div class="brand-item"><img src="https://cdn.worldvectorlogo.com/logos/nestle-2.svg" alt="Nestle"></div>
+                <div class="brand-item"><img src="https://www.pepsi.com/sites/brand-pepsi-com/themes/custom/pepsizero_fe/logo.png" alt="Pepsi"></div>
+                <div class="brand-item"><img src="https://cdn.worldvectorlogo.com/logos/kellogg-s.svg" alt="Kelloggs"></div>
+                <div class="brand-item"><img src="https://cdn.worldvectorlogo.com/logos/procter-gamble-2.svg" alt="P&G"></div>
+                <div class="brand-item"><img src="https://www.redbull.com/v3/resources/images/client/header/redbullcom-logo_double-with-text.svg" alt="Red Bull"></div>
+                <div class="brand-item"><img src="https://cdn.worldvectorlogo.com/logos/nivea-2.svg" alt="Nivea"></div>
+                <div class="brand-item"><img src="https://cdn.worldvectorlogo.com/logos/coca-cola-4.svg" alt="Coca-Cola"></div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20" style="background-color: var(--bg-secondary);">
+            <div class="max-w-4xl mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-black mb-6" style="color: var(--text-primary);">Looking for Specific Brands?</h2>
+                <p class="mb-8 text-lg" style="color: var(--text-secondary);">Can't find what you're looking for? Contact our team and we'll help you source the products you need.</p>
+                <a href="contact.html" class="inline-block bg-[#fcad03] hover:bg-[#e09c02] text-black px-10 py-4 rounded font-bold text-sm uppercase transition shadow-lg">
+                    Contact Our Team
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-20 px-6 border-t" style="background-color: var(--bg-primary); border-color: var(--border-color);">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 text-sm" style="color: var(--text-secondary);">
+            <div>
+                <div class="flex items-center gap-2 mb-6">
+                    <div class="w-8 h-8 bg-[#fcad03] rounded flex items-center justify-center text-black font-black text-sm italic">FM</div>
+                    <span class="text-xl font-bold tracking-tight uppercase" style="color: var(--text-primary);">FMCGIOUS</span>
+                </div>
+                <p class="leading-relaxed">FMCGIOUS is a global leader in FMCG distribution, connecting high-quality brands with consumers worldwide.</p>
+            </div>
+            <div>
+                <h6 class="font-bold uppercase mb-6 tracking-widest" style="color: var(--text-primary);">Navigation</h6>
+                <ul class="space-y-3">
+                    <li><a href="../index.html" class="hover:text-[#fcad03]">Home</a></li>
+                    <li><a href="products.html" class="hover:text-[#fcad03]">All Products</a></li>
+                    <li><a href="about.html" class="hover:text-[#fcad03]">About Our Hub</a></li>
+                    <li><a href="contact.html" class="hover:text-[#fcad03]">Enquire Now</a></li>
+                </ul>
+            </div>
+            <div>
+                <h6 class="font-bold uppercase mb-6 tracking-widest" style="color: var(--text-primary);">Popular</h6>
+                <ul class="space-y-3">
+                    <li><a href="products.html?cat=beverages" class="hover:text-[#fcad03]">Beverages & Drinks</a></li>
+                    <li><a href="products.html?cat=household" class="hover:text-[#fcad03]">Laundry & Home Care</a></li>
+                    <li><a href="products.html?cat=personal-care" class="hover:text-[#fcad03]">Personal Hygiene</a></li>
+                    <li><a href="products.html?cat=food" class="hover:text-[#fcad03]">Confectionary</a></li>
+                </ul>
+            </div>
+            <div>
+                <h6 class="font-bold uppercase mb-6 tracking-widest" style="color: var(--text-primary);">Connect</h6>
+                <div class="flex space-x-4 mb-6">
+                    <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-[#fcad03] hover:text-black transition" style="background-color: var(--bg-tertiary);"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-[#fcad03] hover:text-black transition" style="background-color: var(--bg-tertiary);"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+                </div>
+                <p class="text-xs">© 2026 FMCGIOUS LLC.<br>All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+    <script>
+        window.onload = () => {
+            lucide.createIcons();
+        };
+    </script>
+</body>
+</html>
