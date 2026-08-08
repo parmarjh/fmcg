@@ -51,7 +51,7 @@ falls back to `index.html`.
 
 ## Deployment
 
-Deployed with GitHub Pages from the `main` branch (root). Two details make the SPA work
+Deployed with GitHub Pages from `main`. Two details make the SPA work
 from the `/fmcg/` subpath:
 
 - `404.html` is a copy of `index.html`, so GitHub Pages serves the app for unknown paths
@@ -59,8 +59,7 @@ from the `/fmcg/` subpath:
 - `index.html` sets `window.BASE_PATH` and injects a `<base href>` when served from a
   `github.io` subdirectory, so relative asset paths and pushed URLs stay correct.
 
-Also included: `.github/workflows/pages.yml`, which deploys via GitHub Actions if the
-Pages source is switched from "Deploy from a branch" to "GitHub Actions".
+Deployment runs through `.github/workflows/jekyll-gh-pages.yml` on every push to `main`.
 
 ## Known issues
 
